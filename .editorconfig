@@ -1,0 +1,19 @@
+# C# files
+[*.cs]
+
+#### Core EditorConfig Options ####
+
+max_line_length = 90
+
+# New line preferences
+insert_final_newline = true
+
+#### .NET Coding Conventions ####
+
+# Organize usings
+dotnet_sort_system_directives_first = true
+
+#### C# Formatting Rules ####
+
+# Space preferences
+csharp_space_after_cast = true

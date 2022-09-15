@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <!-- NuGet dependencies -->
+  <ItemGroup>
+    <!-- todo: review -->
+    <PackageReference Include="Fido2" Version="3.0.0" />
+    <PackageReference Include="HotChocolate" Version="12.13.2" />
+    <PackageReference Include="HotChocolate.Types.Scalars" Version="12.13.2" />
+  </ItemGroup>
+
+</Project>

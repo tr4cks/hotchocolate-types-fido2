@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36A5444A-AC50-478F-89CC-EAA024DDD96A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChocolate.Types.Fido2", "src\HotChocolate.Types.Fido2\HotChocolate.Types.Fido2.csproj", "{103B3C78-FBA8-4866-B53B-64551E853C34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FAC354FD-683F-4099-B68C-1C26E3445490}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChocolate.Types.Fido2.UnitTests", "tests\HotChocolate.Types.Fido2.UnitTests\HotChocolate.Types.Fido2.UnitTests.csproj", "{A3967F04-7DA5-4ED1-A8A7-809EF30DBDFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{103B3C78-FBA8-4866-B53B-64551E853C34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{103B3C78-FBA8-4866-B53B-64551E853C34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{103B3C78-FBA8-4866-B53B-64551E853C34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{103B3C78-FBA8-4866-B53B-64551E853C34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3967F04-7DA5-4ED1-A8A7-809EF30DBDFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3967F04-7DA5-4ED1-A8A7-809EF30DBDFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3967F04-7DA5-4ED1-A8A7-809EF30DBDFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3967F04-7DA5-4ED1-A8A7-809EF30DBDFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{103B3C78-FBA8-4866-B53B-64551E853C34} = {36A5444A-AC50-478F-89CC-EAA024DDD96A}
+		{A3967F04-7DA5-4ED1-A8A7-809EF30DBDFA} = {FAC354FD-683F-4099-B68C-1C26E3445490}
+	EndGlobalSection
+EndGlobal
