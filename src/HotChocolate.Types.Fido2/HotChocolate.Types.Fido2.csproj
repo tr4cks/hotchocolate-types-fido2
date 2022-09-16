@@ -6,6 +6,19 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PackageId>Tr4cks.HotChocolate.Types.Fido2</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Description>HotChocolate Fido2 integration</Description>
+    <Authors>tr4cks</Authors>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/tr4cks/hotchocolate-types-fido2</RepositoryUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <!-- Fingerprint icons created by Nikita Golubev - Flaticon -->
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageTags>FIDO2;GraphQL;HotChocolate;Passwordless;WebAuthn</PackageTags>
+  </PropertyGroup>
+
   <!-- NuGet dependencies -->
   <ItemGroup>
     <!-- todo: review -->
@@ -27,6 +40,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>ScalarResources.resx</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath />
+      <Link>LICENSE</Link>
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\assets\logo.png">
+      <Pack>True</Pack>
+      <PackagePath />
+      <Link>logo.png</Link>
+      <Visible>False</Visible>
+    </None>
   </ItemGroup>
 
 </Project>
