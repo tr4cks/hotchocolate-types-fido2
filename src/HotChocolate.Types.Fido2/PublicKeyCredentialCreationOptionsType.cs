@@ -6,13 +6,14 @@ using HotChocolate.Types.Fido2.Scalars;
 
 namespace HotChocolate.Types.Fido2;
 
+// ReSharper disable once ClassNeverInstantiated.Global
 /// <see href="https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions"/>
 public class PublicKeyCredentialCreationOptionsType : ObjectType<CredentialCreateOptions>
 {
     protected override void Configure(IObjectTypeDescriptor<CredentialCreateOptions> descriptor)
     {
         descriptor.BindFieldsExplicitly()
-            .Name(nameof(PublicKeyCredentialCreationOptionsType)[..^"Type".Length])
+            .Name(WellKnownObjectTypes.PublicKeyCredentialCreationOptions)
             .Description("[Documentation](https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions)");
 
         descriptor.Field(f => f.Rp)
@@ -64,7 +65,7 @@ public class PublicKeyCredentialRpEntityType : ObjectType<PublicKeyCredentialRpE
     protected override void Configure(IObjectTypeDescriptor<PublicKeyCredentialRpEntity> descriptor)
     {
         descriptor.BindFieldsExplicitly()
-            .Name(nameof(PublicKeyCredentialRpEntityType)[..^"Type".Length])
+            .Name(WellKnownObjectTypes.PublicKeyCredentialRpEntity)
             .Description("[Documentation](https://w3c.github.io/webauthn/#dictdef-publickeycredentialrpentity)");
 
         descriptor.Field(f => f.Id)
@@ -82,7 +83,7 @@ public class PublicKeyCredentialUserEntityType : ObjectType<Fido2User>
     protected override void Configure(IObjectTypeDescriptor<Fido2User> descriptor)
     {
         descriptor.BindFieldsExplicitly()
-            .Name(nameof(PublicKeyCredentialUserEntityType)[..^"Type".Length])
+            .Name(WellKnownObjectTypes.PublicKeyCredentialUserEntity)
             .Description("[Documentation](https://w3c.github.io/webauthn/#dictdef-publickeycredentialuserentity)");
 
         descriptor.Field(f => f.Id)
@@ -104,7 +105,7 @@ public class PublicKeyCredentialParametersType : ObjectType<PubKeyCredParam>
     protected override void Configure(IObjectTypeDescriptor<PubKeyCredParam> descriptor)
     {
         descriptor.BindFieldsExplicitly()
-            .Name(nameof(PublicKeyCredentialParametersType)[..^"Type".Length])
+            .Name(WellKnownObjectTypes.PublicKeyCredentialParameters)
             .Description("[Documentation](https://w3c.github.io/webauthn/#dictdef-publickeycredentialparameters)");
 
         descriptor.Field(f => f.Type)
@@ -123,7 +124,7 @@ public class PublicKeyCredentialDescriptorType : ObjectType<PublicKeyCredentialD
     protected override void Configure(IObjectTypeDescriptor<PublicKeyCredentialDescriptor> descriptor)
     {
         descriptor.BindFieldsExplicitly()
-            .Name(nameof(PublicKeyCredentialDescriptorType)[..^"Type".Length])
+            .Name(WellKnownObjectTypes.PublicKeyCredentialDescriptor)
             .Description("[Documentation](https://w3c.github.io/webauthn/#dictdef-publickeycredentialdescriptor)");
 
         // is not consistent with the specification
@@ -146,7 +147,7 @@ public class AuthenticatorSelectionCriteriaType : ObjectType<AuthenticatorSelect
     protected override void Configure(IObjectTypeDescriptor<AuthenticatorSelection> descriptor)
     {
         descriptor.BindFieldsExplicitly()
-            .Name(nameof(AuthenticatorSelectionCriteriaType)[..^"Type".Length])
+            .Name(WellKnownObjectTypes.AuthenticatorSelectionCriteria)
             .Description("[Documentation](https://w3c.github.io/webauthn/#dictdef-authenticatorselectioncriteria)");
 
         descriptor.Field(f => f.AuthenticatorAttachment)
@@ -170,7 +171,7 @@ public class AuthenticationExtensionsClientInputsType : ObjectType<Authenticatio
     protected override void Configure(IObjectTypeDescriptor<AuthenticationExtensionsClientInputs> descriptor)
     {
         descriptor.BindFieldsExplicitly()
-            .Name(nameof(AuthenticationExtensionsClientInputsType)[..^"Type".Length])
+            .Name(WellKnownObjectTypes.AuthenticationExtensionsClientInputs)
             .Description("[Documentation](https://w3c.github.io/webauthn/#dictdef-authenticationextensionsclientinputs)");
 
         // must be renamed on the client side to "example.extension"
