@@ -63,12 +63,6 @@ namespace HotChocolate.Types.Fido2.Scalars {
             }
         }
         
-        internal static string EnumMemberType_Description {
-            get {
-                return ResourceManager.GetString("EnumMemberType_Description", resourceCulture);
-            }
-        }
-        
         internal static string EnumMemberType_IsInvalid_ParseLiteral {
             get {
                 return ResourceManager.GetString("EnumMemberType_IsInvalid_ParseLiteral", resourceCulture);

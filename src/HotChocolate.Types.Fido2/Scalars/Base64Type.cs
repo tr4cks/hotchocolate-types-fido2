@@ -7,8 +7,7 @@ public class Base64Type : ScalarType<byte[], StringValueNode>
 {
     public Base64Type() : base(nameof(Base64Type)[..^"Type".Length])
     {
-        // todo: review description
-        Description = "Represents a string encoded in base64";
+        Description = ScalarResources.Base64Type_Description;
     }
 
     /// <inheritdoc />
