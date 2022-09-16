@@ -5,7 +5,7 @@ namespace HotChocolate.Types.Fido2.Scalars;
 
 public class Base64Type : ScalarType<byte[], StringValueNode>
 {
-    public Base64Type() : base(nameof(Base64Type)[..^"Type".Length])
+    public Base64Type() : base(WellKnownScalarTypes.Base64)
     {
         Description = ScalarResources.Base64Type_Description;
     }
