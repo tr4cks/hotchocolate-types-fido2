@@ -1,13 +1,12 @@
 namespace HotChocolate.Types.Fido2.Scalars;
 
-// todo: use resource file for messages
 internal static class ThrowHelper
 {
     public static SerializationException Base64_ParseValue_IsInvalid(IType type)
     {
         return new SerializationException(
             ErrorBuilder.New()
-                .SetMessage("Base64Type cannot parse the provided value. The provided value is not encoded in base 64.")
+                .SetMessage(ScalarResources.Base64Type_IsInvalid_ParseValue)
                 .SetCode(ErrorCodes.Scalars.InvalidRuntimeType)
                 .SetExtension("actualType", WellKnownScalarTypes.Base64)
                 .Build(),
@@ -18,7 +17,7 @@ internal static class ThrowHelper
     {
         return new SerializationException(
             ErrorBuilder.New()
-                .SetMessage("Base64Type cannot parse the provided literal. The provided value is not encoded in base 64.")
+                .SetMessage(ScalarResources.Base64Type_IsInvalid_ParseLiteral)
                 .SetCode(ErrorCodes.Scalars.InvalidSyntaxFormat)
                 .SetExtension("actualType", WellKnownScalarTypes.Base64)
                 .Build(),
@@ -30,7 +29,7 @@ internal static class ThrowHelper
     {
         return new SerializationException(
             ErrorBuilder.New()
-                .SetMessage("EnumMemberType cannot parse the provided value. The provided value is not encoded in base 64.")
+                .SetMessage(ScalarResources.EnumMemberType_IsInvalid_ParseValue)
                 .SetCode(ErrorCodes.Scalars.InvalidRuntimeType)
                 .SetExtension("actualType", WellKnownScalarTypes.EnumMember)
                 .Build(),
@@ -42,7 +41,7 @@ internal static class ThrowHelper
     {
         return new SerializationException(
             ErrorBuilder.New()
-                .SetMessage("EnumMemberType cannot parse the provided literal. The provided value is not encoded in base 64.")
+                .SetMessage(ScalarResources.EnumMemberType_IsInvalid_ParseLiteral)
                 .SetCode(ErrorCodes.Scalars.InvalidSyntaxFormat)
                 .SetExtension("actualType", WellKnownScalarTypes.EnumMember)
                 .Build(),
