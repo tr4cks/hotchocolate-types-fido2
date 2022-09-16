@@ -55,7 +55,7 @@ public class UnitTest1
                 builder.AddMutationType<MutationType>();
             });
         var result = await executor.ExecuteAsync(Query);
-        
+
         Assert.Null(result.Errors);
     }
 }
