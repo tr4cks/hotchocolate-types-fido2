@@ -17,6 +17,9 @@ internal static class WellKnownObjectTypes
     public const string PublicKeyCredentialParameters =
         nameof(PublicKeyCredentialParameters);
 
+    public const string PublicKeyCredentialRequestOptions =
+        nameof(PublicKeyCredentialRequestOptions);
+
     public const string PublicKeyCredentialRpEntity =
         nameof(PublicKeyCredentialRpEntity);
 

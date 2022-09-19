@@ -10,9 +10,11 @@ public static class RequestExecutorBuilderExtensions
 {
     public static IRequestExecutorBuilder AddFido2(this IRequestExecutorBuilder @this) =>
         @this
+            // todo: sort
             .RegisterService<IFido2>()
             .AddType<PublicKeyCredentialCreationOptionsType>()
             .AddType<PublicKeyCredentialType>()
+            .AddType<PublicKeyCredentialRequestOptionsType>()
             // todo: sort and add descriptions (auto?)
             .AddType(new EnumMemberType<AttestationConveyancePreference>(WellKnownScalarTypes
                 .AttestationConveyancePreferenceStringEnum))
