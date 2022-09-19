@@ -58,7 +58,7 @@ public class MakeCredentialOptionsTests
 
         Assert.Null(result.Errors);
     }
-    
+
     // ReSharper disable once ClassNeverInstantiated.Global
     // ReSharper disable once MemberCanBePrivate.Global
     public class MutationType

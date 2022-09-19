@@ -24,7 +24,7 @@ public class AssertionOptionsTests
             }
         }
     ";
-    
+
     [Fact]
     public async Task AssertOnErrors()
     {
@@ -38,7 +38,7 @@ public class AssertionOptionsTests
                 builder.AddMutationType<MutationType>();
             });
         var result = await executor.ExecuteAsync(Query);
-        
+
         Assert.Null(result.Errors);
     }
 
