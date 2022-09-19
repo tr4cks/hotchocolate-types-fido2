@@ -58,64 +58,65 @@ public class MakeCredentialOptionsTests
 
         Assert.Null(result.Errors);
     }
-}
-
-// ReSharper disable once ClassNeverInstantiated.Global
-public class MutationType
-{
-    public CredentialCreateOptions MakeCredentialOptions()
+    
+    // ReSharper disable once ClassNeverInstantiated.Global
+    // ReSharper disable once MemberCanBePrivate.Global
+    public class MutationType
     {
-        Fido2Configuration configuration = new()
+        public CredentialCreateOptions MakeCredentialOptions()
         {
-            ServerDomain = "localhost",
-            ServerName = "FIDO2 Test"
-        };
-        Fido2User user = new()
-        {
-            Id = Encoding.UTF8.GetBytes("Bruce"),
-            Name = "Bruce",
-            DisplayName = "Bruce"
-        };
-        AuthenticatorSelection authenticatorSelection = new()
-        {
-            AuthenticatorAttachment = AuthenticatorAttachment.Platform,
-            RequireResidentKey = false,
-            UserVerification = UserVerificationRequirement.Preferred
-        };
-        List<PublicKeyCredentialDescriptor> excludeCredentials = new()
-        {
-            new()
+            Fido2Configuration configuration = new()
             {
-                Type = PublicKeyCredentialType.PublicKey,
-                Id = Encoding.UTF8.GetBytes("Hello World!"),
-                Transports = new[]
+                ServerDomain = "localhost",
+                ServerName = "FIDO2 Test"
+            };
+            Fido2User user = new()
+            {
+                Id = Encoding.UTF8.GetBytes("Bruce"),
+                Name = "Bruce",
+                DisplayName = "Bruce"
+            };
+            AuthenticatorSelection authenticatorSelection = new()
+            {
+                AuthenticatorAttachment = AuthenticatorAttachment.Platform,
+                RequireResidentKey = false,
+                UserVerification = UserVerificationRequirement.Preferred
+            };
+            List<PublicKeyCredentialDescriptor> excludeCredentials = new()
+            {
+                new()
                 {
-                    AuthenticatorTransport.Ble,
-                    AuthenticatorTransport.Internal,
-                    AuthenticatorTransport.Nfc,
-                    AuthenticatorTransport.Usb
+                    Type = PublicKeyCredentialType.PublicKey,
+                    Id = Encoding.UTF8.GetBytes("Hello World!"),
+                    Transports = new[]
+                    {
+                        AuthenticatorTransport.Ble,
+                        AuthenticatorTransport.Internal,
+                        AuthenticatorTransport.Nfc,
+                        AuthenticatorTransport.Usb
+                    }
                 }
-            }
-        };
-        AuthenticationExtensionsClientInputs extensions = new()
-        {
-            Example = null,
-            AppID = "cedf4be0-6340-416c-8a9e-1dc2f8d0357c",
-            AuthenticatorSelection = new[]
+            };
+            AuthenticationExtensionsClientInputs extensions = new()
             {
-                new byte[] { 1, 2, 3, 4, 5 },
-                new byte[] { 6, 7, 8, 9, 10 }
-            },
-            Extensions = true
-        };
-        return CredentialCreateOptions.Create(
-            configuration,
-            Encoding.UTF8.GetBytes("Hello World!"),
-            user,
-            authenticatorSelection,
-            AttestationConveyancePreference.Direct,
-            excludeCredentials,
-            extensions
-            );
+                Example = null,
+                AppID = "cedf4be0-6340-416c-8a9e-1dc2f8d0357c",
+                AuthenticatorSelection = new[]
+                {
+                    new byte[] { 1, 2, 3, 4, 5 },
+                    new byte[] { 6, 7, 8, 9, 10 }
+                },
+                Extensions = true
+            };
+            return CredentialCreateOptions.Create(
+                configuration,
+                Encoding.UTF8.GetBytes("Hello World!"),
+                user,
+                authenticatorSelection,
+                AttestationConveyancePreference.Direct,
+                excludeCredentials,
+                extensions
+                );
+        }
     }
 }
