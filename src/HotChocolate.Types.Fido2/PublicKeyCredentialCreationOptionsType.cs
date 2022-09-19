@@ -6,6 +6,8 @@ using HotChocolate.Types.Fido2.Scalars;
 
 namespace HotChocolate.Types.Fido2;
 
+// todo: replace Description with resource file
+
 // ReSharper disable once ClassNeverInstantiated.Global
 /// <see href="https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions"/>
 public class PublicKeyCredentialCreationOptionsType : ObjectType<CredentialCreateOptions>
@@ -116,29 +118,6 @@ public class PublicKeyCredentialParametersType : ObjectType<PubKeyCredParam>
             .Type<NonNullType<LongType>>()
             .Resolve(context => (long) context.Parent<PubKeyCredParam>().Alg)
             .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialparameters-alg)");
-    }
-}
-
-public class PublicKeyCredentialDescriptorType : ObjectType<PublicKeyCredentialDescriptor>
-{
-    protected override void Configure(IObjectTypeDescriptor<PublicKeyCredentialDescriptor> descriptor)
-    {
-        descriptor.BindFieldsExplicitly()
-            .Name(WellKnownObjectTypes.PublicKeyCredentialDescriptor)
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dictdef-publickeycredentialdescriptor)");
-
-        // is not consistent with the specification
-        descriptor.Field(f => f.Type)
-            .Type<EnumMemberType<PublicKeyCredentialType>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialdescriptor-type)");
-
-        descriptor.Field(f => f.Id)
-            .Type<NonNullType<Base64Type>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialdescriptor-id)");
-
-        descriptor.Field(f => f.Transports)
-            .Type<ListType<NonNullType<EnumMemberType<AuthenticatorTransport>>>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialdescriptor-transports)");
     }
 }
 
