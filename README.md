@@ -12,4 +12,9 @@
   </p>
 </div>
 
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+Make available the [fido2-net-lib](https://github.com/passwordless-lib/fido2-net-lib) (WebAuthn) types within the [HotChocolate](https://github.com/ChilliCream/hotchocolate) (GraphQL) library.
+
 *[Fingerprint icons created by Blaze150 - Flaticon](https://www.flaticon.com/free-icons/fingerprint)*
