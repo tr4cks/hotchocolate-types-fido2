@@ -14,7 +14,7 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/tr4cks/hotchocolate-types-fido2</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <!-- Fingerprint icons created by Nikita Golubev - Flaticon -->
+    <!-- Fingerprint icons created by Blaze150 - Flaticon -->
     <PackageIcon>logo.png</PackageIcon>
     <PackageTags>FIDO2;GraphQL;HotChocolate;Passwordless;WebAuthn</PackageTags>
   </PropertyGroup>
