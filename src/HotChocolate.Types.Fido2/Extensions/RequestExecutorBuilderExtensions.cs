@@ -16,6 +16,8 @@ public static class RequestExecutorBuilderExtensions
             .AddType<PublicKeyCredentialType>()
             .AddType<PublicKeyCredentialRequestOptionsType>()
             .AddType<PublicKeyCredentialInputType>()
+            .AddType<AttestationVerificationSuccessType>()
+            .AddType<AssertionVerificationResultType>()
             // todo: sort and add descriptions (auto?)
             .AddType(new EnumMemberType<AttestationConveyancePreference>(WellKnownScalarTypes
                 .AttestationConveyancePreferenceStringEnum))

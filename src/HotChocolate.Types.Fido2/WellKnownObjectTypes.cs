@@ -2,6 +2,12 @@ namespace HotChocolate.Types.Fido2;
 
 internal static class WellKnownObjectTypes
 {
+    public const string AssertionVerificationResult =
+        nameof(AssertionVerificationResult);
+
+    public const string AttestationVerificationSuccess =
+        nameof(AttestationVerificationSuccess);
+
     public const string AuthenticationExtensionsClientInputs =
         nameof(AuthenticationExtensionsClientInputs);
 

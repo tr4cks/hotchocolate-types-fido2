@@ -1,5 +1,6 @@
 using System.Text;
 using Fido2NetLib;
+using Fido2NetLib.Objects;
 using HotChocolate.Execution;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -10,6 +11,23 @@ public class MakeCredentialTests
     private const string MakeCredentialInputQuery = @"
         mutation MakeCredential($input: PublicKeyCredentialInput!) {
             makeCredentialInput(input: $input)
+        }
+    ";
+
+    private const string MakeCredentialOutputQuery = @"
+        mutation {
+            makeCredentialOutput {
+                credentialId
+                counter
+                publicKey
+                user {
+                    id
+                    displayName
+                    name
+                }
+                credType
+                aaguid
+            }
         }
     ";
 
@@ -44,6 +62,23 @@ public class MakeCredentialTests
         Assert.Null(result.Errors);
     }
 
+    [Fact]
+    public async Task MakeCredentialOutputTest()
+    {
+        var executor = await RequestExecutor.GetAsync(
+            setupRequestExecutorBuilderAction: builder =>
+            {
+                builder.ModifyOptions(options =>
+                {
+                    options.StrictValidation = false;
+                });
+                builder.AddMutationType<MutationType>();
+            });
+        var result = await executor.ExecuteAsync(MakeCredentialOutputQuery);
+
+        Assert.Null(result.Errors);
+    }
+
     // ReSharper disable once ClassNeverInstantiated.Global
     // ReSharper disable once MemberCanBePrivate.Global
     public class MutationType
@@ -51,5 +86,24 @@ public class MakeCredentialTests
         [GraphQLType(typeof(AnyType))]
         public object? MakeCredentialInput(AuthenticatorAttestationRawResponse input) =>
             null;
+
+        public AttestationVerificationSuccess MakeCredentialOutput()
+        {
+            Fido2User user = new()
+            {
+                Id = Encoding.UTF8.GetBytes("Bruce"),
+                Name = "Bruce",
+                DisplayName = "Bruce"
+            };
+            return new AttestationVerificationSuccess()
+            {
+                CredentialId = Encoding.UTF8.GetBytes("Hello World!"),
+                Counter = 42,
+                PublicKey = Encoding.UTF8.GetBytes("Hello World!"),
+                User = user,
+                CredType = "public-key",
+                Aaguid = Guid.NewGuid()
+            };
+        }
     }
 }
