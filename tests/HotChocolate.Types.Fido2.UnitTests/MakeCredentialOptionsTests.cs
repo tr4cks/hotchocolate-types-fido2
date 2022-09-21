@@ -8,9 +8,9 @@ namespace HotChocolate.Types.Fido2.UnitTests;
 
 public class MakeCredentialOptionsTests
 {
-    private const string Query = @"
+    private const string MakeCredentialOptionsOutputQuery = @"
         mutation {
-            makeCredentialOptions {
+            makeCredentialOptionsOutput {
                 rp {
                     id
                     name
@@ -43,7 +43,7 @@ public class MakeCredentialOptionsTests
     ";
 
     [Fact]
-    public async Task AssertOnErrors()
+    public async Task MakeCredentialOptionsOutputTest()
     {
         var executor = await RequestExecutor.GetAsync(
             setupRequestExecutorBuilderAction: builder =>
@@ -54,7 +54,7 @@ public class MakeCredentialOptionsTests
                 });
                 builder.AddMutationType<MutationType>();
             });
-        var result = await executor.ExecuteAsync(Query);
+        var result = await executor.ExecuteAsync(MakeCredentialOptionsOutputQuery);
 
         Assert.Null(result.Errors);
     }
@@ -63,7 +63,7 @@ public class MakeCredentialOptionsTests
     // ReSharper disable once MemberCanBePrivate.Global
     public class MutationType
     {
-        public CredentialCreateOptions MakeCredentialOptions()
+        public CredentialCreateOptions MakeCredentialOptionsOutput()
         {
             Fido2Configuration configuration = new()
             {

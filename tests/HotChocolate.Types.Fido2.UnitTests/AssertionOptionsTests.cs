@@ -8,9 +8,9 @@ namespace HotChocolate.Types.Fido2.UnitTests;
 
 public class AssertionOptionsTests
 {
-    private const string Query = @"
+    private const string AssertionOptionsOutputQuery = @"
         mutation {
-            assertionOptions {
+            assertionOptionsOutput {
                 challenge
                 timeout
                 rpId
@@ -26,7 +26,7 @@ public class AssertionOptionsTests
     ";
 
     [Fact]
-    public async Task AssertOnErrors()
+    public async Task AssertionOptionsOutputTest()
     {
         var executor = await RequestExecutor.GetAsync(
             setupRequestExecutorBuilderAction: builder =>
@@ -37,7 +37,7 @@ public class AssertionOptionsTests
                 });
                 builder.AddMutationType<MutationType>();
             });
-        var result = await executor.ExecuteAsync(Query);
+        var result = await executor.ExecuteAsync(AssertionOptionsOutputQuery);
 
         Assert.Null(result.Errors);
     }
@@ -46,7 +46,7 @@ public class AssertionOptionsTests
     // ReSharper disable once MemberCanBePrivate.Global
     public class MutationType
     {
-        public Fido2NetLib.AssertionOptions AssertionOptions()
+        public AssertionOptions AssertionOptionsOutput()
         {
             Fido2Configuration configuration = new()
             {
@@ -79,7 +79,7 @@ public class AssertionOptionsTests
                 },
                 Extensions = true
             };
-            return Fido2NetLib.AssertionOptions.Create(
+            return AssertionOptions.Create(
                 configuration, Encoding.UTF8.GetBytes("Hello World!"),
                 allowedCredentials,
                 UserVerificationRequirement.Preferred,
