@@ -5,8 +5,14 @@ internal static class WellKnownObjectTypes
     public const string AuthenticationExtensionsClientInputs =
         nameof(AuthenticationExtensionsClientInputs);
 
+    public const string AuthenticatorResponseInput =
+        nameof(AuthenticatorResponseInput);
+
     public const string AuthenticatorSelectionCriteria =
         nameof(AuthenticatorSelectionCriteria);
+
+    public const string PublicKeyCredentialInput =
+        nameof(PublicKeyCredentialInput);
 
     public const string PublicKeyCredentialDescriptor =
         nameof(PublicKeyCredentialDescriptor);
