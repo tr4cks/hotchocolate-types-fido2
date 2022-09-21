@@ -95,7 +95,7 @@ public class MakeCredentialTests
                 Name = "Bruce",
                 DisplayName = "Bruce"
             };
-            return new AttestationVerificationSuccess()
+            return new AttestationVerificationSuccess
             {
                 CredentialId = Encoding.UTF8.GetBytes("Hello World!"),
                 Counter = 42,
