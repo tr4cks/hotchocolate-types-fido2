@@ -40,7 +40,7 @@ public class AuthenticatorAttestationResponseInputType : InputObjectType<Authent
     {
         descriptor.BindFieldsExplicitly()
             .Name(WellKnownObjectTypes.AuthenticatorAttestationResponseInput)
-            .Description("[Description](https://w3c.github.io/webauthn/#authenticatorresponse)");
+            .Description("[Description](https://w3c.github.io/webauthn/#authenticatorattestationresponse)");
 
         descriptor.Field(f => f.ClientDataJson)
             .Name("clientDataJSON")
