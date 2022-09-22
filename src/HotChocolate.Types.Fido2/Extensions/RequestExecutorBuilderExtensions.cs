@@ -15,7 +15,7 @@ public static class RequestExecutorBuilderExtensions
             .AddType<PublicKeyCredentialCreationOptionsType>()
             .AddType<PublicKeyCredentialType>()
             .AddType<PublicKeyCredentialRequestOptionsType>()
-            .AddType<PublicKeyCredentialInputType>()
+            .AddType<PublicKeyCredentialAttestationInputType>()
             .AddType<AttestationVerificationSuccessType>()
             .AddType<AssertionVerificationResultType>()
             // todo: sort and add descriptions (auto?)

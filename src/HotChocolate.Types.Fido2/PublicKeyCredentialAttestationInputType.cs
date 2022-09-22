@@ -5,12 +5,12 @@ using HotChocolate.Types.Fido2.Scalars;
 namespace HotChocolate.Types.Fido2;
 
 // ReSharper disable once ClassNeverInstantiated.Global
-public class PublicKeyCredentialInputType : InputObjectType<AuthenticatorAttestationRawResponse>
+public class PublicKeyCredentialAttestationInputType : InputObjectType<AuthenticatorAttestationRawResponse>
 {
     protected override void Configure(IInputObjectTypeDescriptor<AuthenticatorAttestationRawResponse> descriptor)
     {
         descriptor.BindFieldsExplicitly()
-            .Name(WellKnownObjectTypes.PublicKeyCredentialInput)
+            .Name(WellKnownObjectTypes.PublicKeyCredentialAttestationInput)
             .Description("[Description](https://w3c.github.io/webauthn/#publickeycredential)");
 
         descriptor.Field(f => f.Id)
@@ -26,7 +26,7 @@ public class PublicKeyCredentialInputType : InputObjectType<AuthenticatorAttesta
             .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredential-rawid)");
 
         descriptor.Field(f => f.Response)
-            .Type<NonNullType<AuthenticatorResponseInputType>>()
+            .Type<NonNullType<AuthenticatorAttestationResponseInputType>>()
             .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredential-response)");
 
         // todo: extentions
@@ -34,12 +34,12 @@ public class PublicKeyCredentialInputType : InputObjectType<AuthenticatorAttesta
 }
 
 // ReSharper disable once ClassNeverInstantiated.Global
-public class AuthenticatorResponseInputType : InputObjectType<AuthenticatorAttestationRawResponse.ResponseData>
+public class AuthenticatorAttestationResponseInputType : InputObjectType<AuthenticatorAttestationRawResponse.ResponseData>
 {
     protected override void Configure(IInputObjectTypeDescriptor<AuthenticatorAttestationRawResponse.ResponseData> descriptor)
     {
         descriptor.BindFieldsExplicitly()
-            .Name(WellKnownObjectTypes.AuthenticatorResponseInput)
+            .Name(WellKnownObjectTypes.AuthenticatorAttestationResponseInput)
             .Description("[Description](https://w3c.github.io/webauthn/#authenticatorresponse)");
 
         descriptor.Field(f => f.ClientDataJson)
