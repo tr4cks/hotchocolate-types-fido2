@@ -47,7 +47,6 @@ public class AuthenticatorAttestationResponseInputType : InputObjectType<Authent
             .Type<NonNullType<Base64Type>>()
             .Description("[Description](https://w3c.github.io/webauthn/#dom-authenticatorresponse-clientdatajson)");
 
-        // is not consistent with the specification
         descriptor.Field(f => f.AttestationObject)
             .Type<Base64Type>()
             .Description("[Description](https://w3c.github.io/webauthn/#dom-authenticatorattestationresponse-attestationobject)");
