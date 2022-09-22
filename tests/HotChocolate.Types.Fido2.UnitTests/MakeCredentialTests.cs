@@ -9,7 +9,7 @@ namespace HotChocolate.Types.Fido2.UnitTests;
 public class MakeCredentialTests
 {
     private const string MakeCredentialInputQuery = @"
-        mutation MakeCredential($input: PublicKeyCredentialInput!) {
+        mutation MakeCredential($input: PublicKeyCredentialAttestationInput!) {
             makeCredentialInput(input: $input)
         }
     ";
