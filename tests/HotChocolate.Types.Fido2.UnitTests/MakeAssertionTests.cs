@@ -15,7 +15,7 @@ public class MakeAssertionTests
             }
         }
     ";
-    
+
     [Fact]
     public async Task MakeAssertionOutputTest()
     {
