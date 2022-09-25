@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <!-- rename HotChocolate.Extensions.Types.Fido2 -->
     <PackageId>Tr4cks.HotChocolate.Types.Fido2</PackageId>
     <PackageVersion>1.0.0-preview.1</PackageVersion>
     <Description>HotChocolate Fido2 integration</Description>
@@ -40,6 +41,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>ScalarResources.resx</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="$(AssemblyName).UnitTests" />
   </ItemGroup>
 
   <ItemGroup>
