@@ -28,7 +28,9 @@ public class PublicKeyCredentialAssertionInputType : InputObjectType<Authenticat
             .Type<AuthenticatorAssertionResponseInputType>()
             .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredential-response)");
 
-        // todo: extensions
+        descriptor.Field(f => f.Extensions)
+            .Type<AuthenticationExtensionsClientOutputsType>()
+            .Description("[Documentation](https://w3c.github.io/webauthn/#dictdef-authenticationextensionsclientoutputs)");
     }
 }
 

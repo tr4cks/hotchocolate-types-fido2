@@ -99,14 +99,15 @@ public class MakeCredentialOptionsTests
             };
             AuthenticationExtensionsClientInputs extensions = new()
             {
-                Example = null,
+                Example = "Hello World!",
                 AppID = "cedf4be0-6340-416c-8a9e-1dc2f8d0357c",
                 AuthenticatorSelection = new[]
                 {
                     new byte[] { 1, 2, 3, 4, 5 },
                     new byte[] { 6, 7, 8, 9, 10 }
                 },
-                Extensions = true
+                Extensions = true,
+                UserVerificationMethod = true
             };
             return CredentialCreateOptions.Create(
                 configuration,

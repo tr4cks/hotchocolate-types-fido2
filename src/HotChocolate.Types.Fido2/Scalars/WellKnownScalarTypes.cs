@@ -5,6 +5,12 @@ internal static class WellKnownScalarTypes
     public const string AttestationConveyancePreferenceStringEnum =
         nameof(AttestationConveyancePreferenceStringEnum);
 
+    public const string AuthenticationExtensionsClientOutputs =
+        nameof(AuthenticationExtensionsClientOutputs);
+
+    public const string AuthenticationExtensionsClientInputs =
+        nameof(AuthenticationExtensionsClientInputs);
+
     public const string AuthenticatorAttachmentStringEnum =
         nameof(AuthenticatorAttachmentStringEnum);
 

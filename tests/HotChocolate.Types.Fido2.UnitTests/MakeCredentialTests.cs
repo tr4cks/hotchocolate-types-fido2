@@ -54,6 +54,16 @@ public class MakeCredentialTests
                     {
                         {"clientDataJSON", Convert.ToBase64String(Encoding.UTF8.GetBytes("Hello World!"))},
                         {"attestationObject", Convert.ToBase64String(Encoding.UTF8.GetBytes("Hello World!"))}
+                    }},
+                    {"extensions", new Dictionary<string, object?>
+                    {
+                        {"example.extension", "Hello World!"},
+                        {"appid", true},
+                        {"authnSel", true},
+                        // ReSharper disable once StringLiteralTypo
+                        {"exts", new List<object> {"Hello", "World!"}},
+                        {"uvm", new List<List<object>> {new() {1, 2, 3}, new() {4, 5, 6}}},
+                        {"ignoredProperty", true}
                     }}
                 })
                 .Create();
