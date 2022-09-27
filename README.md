@@ -17,6 +17,13 @@
   </p>
 </div>
 
+<br />
+
+![Nuget](https://img.shields.io/nuget/v/HotChocolate.Extensions.Types.Fido2)
+![GitHub](https://img.shields.io/github/license/tr4cks/hotchocolate-types-fido2)
+
+---
+
 
 
 <!-- TABLE OF CONTENTS -->
