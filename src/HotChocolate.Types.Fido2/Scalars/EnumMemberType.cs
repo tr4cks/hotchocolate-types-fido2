@@ -87,14 +87,12 @@ public class EnumMemberType<TEnum> : ScalarType<TEnum, StringValueNode> where TE
         }
     }
 
-    // todo: NotNullWhen?
     private bool TrySerialize(TEnum runtimeValue, [NotNullWhen(true)] out string? resultValue)
     {
         resultValue = runtimeValue.GetEnumMemberValue();
         return resultValue is not null;
     }
 
-    // todo: NotNullWhen?
     private bool TryDeserialize(string resultValue, [NotNullWhen(true)] out TEnum? runtimeValue)
     {
         runtimeValue = EnumExtensions.GetEnumFromEnumMemberValue<TEnum>(resultValue);

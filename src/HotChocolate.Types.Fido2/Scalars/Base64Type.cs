@@ -3,6 +3,7 @@ using HotChocolate.Language;
 
 namespace HotChocolate.Types.Fido2.Scalars;
 
+// ReSharper disable once ClassNeverInstantiated.Global
 public class Base64Type : ScalarType<byte[], StringValueNode>
 {
     public Base64Type() : base(WellKnownScalarTypes.Base64)
@@ -25,7 +26,6 @@ public class Base64Type : ScalarType<byte[], StringValueNode>
         return true;
     }
 
-    // todo
     /// <inheritdoc />
     public override IValueNode ParseResult(object? resultValue)
     {
@@ -33,7 +33,6 @@ public class Base64Type : ScalarType<byte[], StringValueNode>
         {
             null => NullValueNode.Default,
 
-            // todo: review
             string s when TryDeserialize(s, out _) =>
                 new StringValueNode(s),
 
@@ -43,7 +42,6 @@ public class Base64Type : ScalarType<byte[], StringValueNode>
         };
     }
 
-    // todo: review
     /// <inheritdoc />
     protected override byte[] ParseLiteral(StringValueNode valueSyntax)
     {
@@ -96,7 +94,6 @@ public class Base64Type : ScalarType<byte[], StringValueNode>
 
     private string Serialize(byte[] runtimeValue) => Convert.ToBase64String(runtimeValue);
 
-    // todo: NotNullWhen?
     private bool TryDeserialize(string resultValue, [NotNullWhen(true)] out byte[]? runtimeValue)
     {
         try
