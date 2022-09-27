@@ -8,9 +8,6 @@ internal static class WellKnownObjectTypes
     public const string AttestationVerificationSuccess =
         nameof(AttestationVerificationSuccess);
 
-    public const string AuthenticationExtensionsClientInputs =
-        nameof(AuthenticationExtensionsClientInputs);
-
     public const string AuthenticatorAssertionResponseInput =
         nameof(AuthenticatorAssertionResponseInput);
 
