@@ -33,7 +33,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#credits">Acknowledgments</a></li>
+    <li><a href="#credits">Credits</a></li>
   </ol>
 </details>
 
