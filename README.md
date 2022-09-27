@@ -90,11 +90,29 @@ You can then use all types defined in `fido2-net-lib` library with the differenc
 error handling must be done within GraphQL mutations because it is not included in types
 as it is the case in `fido2-net-lib` library.
 
+You can consult the schema via `Banana Cake Pop` to directly see which type you can use
+and deduce the relationships using the [table below](#type-mapping-table).
+
+
 <br />
 
 ⚠️ **NON-COMPLETE DOCUMENTATION** ⚠️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- TYPE MAPPING TABLE -->
+## Type Mapping Table
+
+| FIDO2 types                    | HotChocolate types                 | GraphQL types                  |
+|--------------------------------|------------------------------------|--------------------------------|
+| AssertionVerificationResult    | AssertionVerificationResultType    | AssertionVerificationResult    |
+| AttestationVerificationSuccess | AttestationVerificationSuccessType | AttestationVerificationSuccess |
+
+<br />
+
+⚠️ **NON-COMPLETE DOCUMENTATION** ⚠️
 
 
 
