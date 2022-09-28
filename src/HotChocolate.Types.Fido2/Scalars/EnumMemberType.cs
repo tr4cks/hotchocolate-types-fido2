@@ -1,6 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
+using Fido2NetLib;
 using HotChocolate.Language;
-using HotChocolate.Types.Fido2.Extensions;
 
 namespace HotChocolate.Types.Fido2.Scalars;
 
@@ -46,11 +46,7 @@ public class EnumMemberType<TEnum> : ScalarType<TEnum, StringValueNode> where TE
     /// <inheritdoc />
     protected override StringValueNode ParseValue(TEnum runtimeValue)
     {
-        if (TrySerialize(runtimeValue, out var value))
-        {
-            return new(value);
-        }
-        throw ThrowHelper.EnumMember_ParseValue_IsInvalid(this);
+        return new(Serialize(runtimeValue));
     }
 
     /// <inheritdoc />
@@ -61,8 +57,8 @@ public class EnumMemberType<TEnum> : ScalarType<TEnum, StringValueNode> where TE
             case null:
                 resultValue = null;
                 return true;
-            case TEnum e when TrySerialize(e, out var value):
-                resultValue = value;
+            case TEnum e:
+                resultValue = Serialize(e);
                 return true;
             default:
                 resultValue = null;
@@ -87,15 +83,19 @@ public class EnumMemberType<TEnum> : ScalarType<TEnum, StringValueNode> where TE
         }
     }
 
-    private bool TrySerialize(TEnum runtimeValue, [NotNullWhen(true)] out string? resultValue)
+    private string Serialize(TEnum runtimeValue)
     {
-        resultValue = runtimeValue.GetEnumMemberValue();
-        return resultValue is not null;
+        return EnumNameMapper<TEnum>.GetName(runtimeValue);
     }
 
     private bool TryDeserialize(string resultValue, [NotNullWhen(true)] out TEnum? runtimeValue)
     {
-        runtimeValue = EnumExtensions.GetEnumFromEnumMemberValue<TEnum>(resultValue);
-        return runtimeValue is not null;
+        if (EnumNameMapper<TEnum>.TryGetValue(resultValue, out var result))
+        {
+            runtimeValue = result;
+            return true;
+        }
+        runtimeValue = null;
+        return false;
     }
 }
