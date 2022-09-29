@@ -13,7 +13,6 @@ public static class RequestExecutorBuilderExtensions
             // todo: sort
             .RegisterService<IFido2>()
             .AddType<PublicKeyCredentialCreationOptionsType>()
-            .AddType<PublicKeyCredentialType>()
             .AddType<PublicKeyCredentialRequestOptionsType>()
             .AddType<PublicKeyCredentialAttestationInputType>()
             .AddType<AttestationVerificationSuccessType>()
