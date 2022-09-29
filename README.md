@@ -20,6 +20,7 @@
 <br />
 
 [![Nuget](https://img.shields.io/nuget/v/HotChocolate.Extensions.Types.Fido2)](https://www.nuget.org/packages/HotChocolate.Extensions.Types.Fido2)
+[![codecov](https://codecov.io/gh/tr4cks/hotchocolate-types-fido2/branch/main/graph/badge.svg?token=WHT2JAQM1N)](https://codecov.io/gh/tr4cks/hotchocolate-types-fido2)
 [![GitHub](https://img.shields.io/github/license/tr4cks/hotchocolate-types-fido2)](https://github.com/tr4cks/hotchocolate-types-fido2/blob/main/LICENSE)
 
 ---
