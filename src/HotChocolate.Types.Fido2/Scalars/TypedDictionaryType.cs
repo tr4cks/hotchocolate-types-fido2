@@ -12,7 +12,7 @@ internal abstract class TypedDictionaryType<TRuntimeType> : ScalarType<TRuntimeT
     private readonly DictionaryToObjectValueConverter _dictionaryToObjectValueConverter = new();
     private readonly ObjectValueToDictionaryConverter _objectValueToDictConverter = new();
 
-    protected TypedDictionaryType(NameString name, string? description = null, BindingBehavior bind = BindingBehavior.Implicit) : base(name, bind)
+    protected TypedDictionaryType(NameString name, string? description = null, BindingBehavior bind = BindingBehavior.Explicit) : base(name, bind)
     {
         Description = description;
     }
