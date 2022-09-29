@@ -82,6 +82,11 @@ dotnet add package HotChocolate.Extensions.Types.Fido2
 Configure services to integrate all types defined by the `fido2-net-lib` library.
 
 ```csharp
+builder.Services.AddFido2(options =>
+{
+    // See the configuration example at https://github.com/passwordless-lib/fido2-net-lib/blob/v3.0.1/Demo/Startup.cs#L47
+});
+
 builder.Services
     .AddGraphQLServer()
     .AddFido2();
@@ -94,6 +99,10 @@ as it is the case in `fido2-net-lib` library.
 You can consult the schema via `Banana Cake Pop` to directly see which type you can use
 and deduce the relationships using the [table below](#type-mapping-table).
 
+For more details concerning the implementation of controllers allowing the implementation
+of [FIDO2](https://fidoalliance.org/fido2/) / [WebAuthn](https://www.w3.org/TR/webauthn/)
+refer to the [example](https://github.com/passwordless-lib/fido2-net-lib/blob/v3.0.1/Demo/Controller.cs)
+provided by the `fido2-net-lib` library.
 
 <br />
 
