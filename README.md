@@ -115,23 +115,37 @@ provided by the `fido2-net-lib` library.
 <!-- TYPE MAPPING TABLE -->
 ## Type Mapping Table
 
-| FIDO2 types                       | HotChocolate types                                | GraphQL types                               | Binding behavior[^binding] |
-|-----------------------------------|---------------------------------------------------|---------------------------------------------|----------------------------|
-| `AssertionVerificationResult`     | `AssertionVerificationResultType`                 | `AssertionVerificationResult`               | Implicit[^implicit]        |
-| `AttestationConveyancePreference` | `EnumMemberType<AttestationConveyancePreference>` | `AttestationConveyancePreferenceStringEnum` | Explicit[^explicit]        |
-| `AttestationVerificationSuccess`  | `AttestationVerificationSuccessType`              | `AttestationVerificationSuccess`            | Implicit[^implicit]        |
-| `AuthenticatorAttachment`         | `AuthenticatorAttachmentType`                     | `AuthenticatorAttachment`                   | Implicit[^implicit]        |
-| `AuthenticatorTransport`          | `AuthenticatorTransportType`                      | `AuthenticatorTransport`                    | Implicit[^implicit]        |
-| `PublicKeyCredentialType`         | `PublicKeyCredentialTypeType`                     | `PublicKeyCredentialType`                   | Implicit[^implicit]        |
-| `UserVerificationRequirement`     | `UserVerificationRequirementType`                 | `UserVerificationRequirement`               | Implicit[^implicit]        |
+| FIDO2 types                                           | HotChocolate types                                | GraphQL types                               | Binding behavior[^binding] |
+|-------------------------------------------------------|---------------------------------------------------|---------------------------------------------|----------------------------|
+| `AssertionOptions`                                    | `PublicKeyCredentialRequestOptionsType`           | `PublicKeyCredentialRequestOptions`         | Implicit[^implicit]        |
+| `AssertionVerificationResult`                         | `AssertionVerificationResultType`                 | `AssertionVerificationResult`               | Implicit[^implicit]        |
+| `AttestationConveyancePreference`                     | `AttestationConveyancePreferenceType`             | `AttestationConveyancePreference`           | Implicit[^implicit]        |
+| `AttestationConveyancePreference`                     | `EnumMemberType<AttestationConveyancePreference>` | `AttestationConveyancePreferenceStringEnum` | Explicit[^explicit]        |
+| `AttestationVerificationSuccess`                      | `AttestationVerificationSuccessType`              | `AttestationVerificationSuccess`            | Implicit[^implicit]        |
+| `AuthenticationExtensionsClientInputs`                | `AuthenticationExtensionsClientInputsType`        | `AuthenticationExtensionsClientInputs`      | Explicit[^explicit]        |
+| `AuthenticationExtensionsClientOutputs`               | `AuthenticationExtensionsClientOutputsType`       | `AuthenticationExtensionsClientOutputs`     | Explicit[^explicit]        |
+| `AuthenticatorAssertionRawResponse`                   | `PublicKeyCredentialAssertionInputType`           | `PublicKeyCredentialAssertionInput`         | Implicit[^implicit]        |
+| `AuthenticatorAssertionRawResponse.AssertionResponse` | `AuthenticatorAssertionResponseInputType`         | `AuthenticatorAssertionResponseInput`       | Explicit[^explicit]        |
+| `AuthenticatorAttachment`                             | `AuthenticatorAttachmentType`                     | `AuthenticatorAttachment`                   | Implicit[^implicit]        |
+| `AuthenticatorAttachment`                             | `EnumMemberType<AuthenticatorAttachment>`         | `AuthenticatorAttachmentStringEnum`         | Explicit[^explicit]        |
+| `AuthenticatorAttestationRawResponse`                 | `PublicKeyCredentialAttestationInputType`         | `PublicKeyCredentialAttestationInput`       | Implicit[^implicit]        |
+| `AuthenticatorAttestationRawResponse.ResponseData`    | `AuthenticatorAttestationResponseInputType`       | `AuthenticatorAttestationResponseInput`     | Explicit[^explicit]        |
+| `AuthenticatorSelection`                              | `AuthenticatorSelectionCriteriaType`              | `AuthenticatorSelectionCriteria`            | Explicit[^explicit]        |
+| `AuthenticatorTransport`                              | `AuthenticatorTransportType`                      | `AuthenticatorTransport`                    | Implicit[^implicit]        |
+| `AuthenticatorTransport`                              | `EnumMemberType<AuthenticatorTransport>`          | `AuthenticatorTransportStringEnum`          | Explicit[^explicit]        |
+| `CredentialCreateOptions`                             | `PublicKeyCredentialCreationOptionsType`          | `PublicKeyCredentialCreationOptions`        | Implicit[^implicit]        |
+| `Fido2User`                                           | `PublicKeyCredentialUserEntityType`               | `PublicKeyCredentialUserEntity`             | Explicit[^explicit]        |
+| `PubKeyCredParam`                                     | `PublicKeyCredentialParametersType`               | `PublicKeyCredentialParameters`             | Explicit[^explicit]        |
+| `PublicKeyCredentialDescriptor`                       | `PublicKeyCredentialDescriptorType`               | `PublicKeyCredentialDescriptor`             | Explicit[^explicit]        |
+| `PublicKeyCredentialRpEntity`                         | `PublicKeyCredentialRpEntityType`                 | `PublicKeyCredentialRpEntity`               | Explicit[^explicit]        |
+| `PublicKeyCredentialType`                             | `PublicKeyCredentialTypeType`                     | `PublicKeyCredentialType`                   | Implicit[^implicit]        |
+| `PublicKeyCredentialType`                             | `EnumMemberType<PublicKeyCredentialType>`         | `PublicKeyCredentialTypeStringEnum`         | Explicit[^explicit]        |
+| `UserVerificationRequirement`                         | `UserVerificationRequirementType`                 | `UserVerificationRequirement`               | Implicit[^implicit]        |
+| `UserVerificationRequirement`                         | `EnumMemberType<UserVerificationRequirement>`     | `UserVerificationRequirementStringEnum`     | Explicit[^explicit]        |
 
 [^binding]: Defines the type system binding behavior of `HotChocolate`.
 [^implicit]: Implicitly bind type system members.
 [^explicit]: Type system members need to be explicitly bound.
-
-<br />
-
-⚠️ **NON-COMPLETE DOCUMENTATION** ⚠️
 
 
 
