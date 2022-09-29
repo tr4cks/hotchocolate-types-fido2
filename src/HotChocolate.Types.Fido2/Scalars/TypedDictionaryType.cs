@@ -5,7 +5,6 @@ using HotChocolate.Utilities;
 
 namespace HotChocolate.Types.Fido2.Scalars;
 
-// todo: review accessibility of all classes
 // todo: format files max line
 internal abstract class TypedDictionaryType<TRuntimeType> : ScalarType<TRuntimeType, ObjectValueNode>
 {
