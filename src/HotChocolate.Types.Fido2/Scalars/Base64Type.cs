@@ -4,7 +4,7 @@ using HotChocolate.Language;
 namespace HotChocolate.Types.Fido2.Scalars;
 
 // ReSharper disable once ClassNeverInstantiated.Global
-public class Base64Type : ScalarType<byte[], StringValueNode>
+internal class Base64Type : ScalarType<byte[], StringValueNode>
 {
     public Base64Type() : base(WellKnownScalarTypes.Base64)
     {
