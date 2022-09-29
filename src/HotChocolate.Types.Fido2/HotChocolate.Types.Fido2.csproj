@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <!-- rename HotChocolate.Extensions.Types.Fido2 -->
+    <!-- todo: add symbols? -->
     <PackageId>HotChocolate.Extensions.Types.Fido2</PackageId>
     <PackageVersion>1.0.0-preview.1</PackageVersion>
     <Description>HotChocolate Fido2 integration</Description>
@@ -34,6 +34,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ScalarResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="ObjectTypeResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ObjectTypeResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -41,6 +45,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>ScalarResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ObjectTypeResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ObjectTypeResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 

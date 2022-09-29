@@ -5,17 +5,26 @@ internal static class WellKnownObjectTypes
     public const string AssertionVerificationResult =
         nameof(AssertionVerificationResult);
 
+    public const string AttestationConveyancePreference =
+        nameof(AttestationConveyancePreference);
+
     public const string AttestationVerificationSuccess =
         nameof(AttestationVerificationSuccess);
 
     public const string AuthenticatorAssertionResponseInput =
         nameof(AuthenticatorAssertionResponseInput);
 
+    public const string AuthenticatorAttachment =
+        nameof(AuthenticatorAttachment);
+
     public const string AuthenticatorAttestationResponseInput =
         nameof(AuthenticatorAttestationResponseInput);
 
     public const string AuthenticatorSelectionCriteria =
         nameof(AuthenticatorSelectionCriteria);
+
+    public const string AuthenticatorTransport =
+        nameof(AuthenticatorTransport);
 
     public const string PublicKeyCredentialAssertionInput =
         nameof(PublicKeyCredentialAssertionInput);
@@ -38,6 +47,12 @@ internal static class WellKnownObjectTypes
     public const string PublicKeyCredentialRpEntity =
         nameof(PublicKeyCredentialRpEntity);
 
+    public const string PublicKeyCredentialType =
+        nameof(PublicKeyCredentialType);
+
     public const string PublicKeyCredentialUserEntity =
         nameof(PublicKeyCredentialUserEntity);
+
+    public const string UserVerificationRequirement =
+        nameof(UserVerificationRequirement);
 }

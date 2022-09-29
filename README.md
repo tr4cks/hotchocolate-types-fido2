@@ -109,8 +109,12 @@ and deduce the relationships using the [table below](#type-mapping-table).
 | FIDO2 types                       | HotChocolate types                                | GraphQL types                               | Binding behavior[^binding] |
 |-----------------------------------|---------------------------------------------------|---------------------------------------------|----------------------------|
 | `AssertionVerificationResult`     | `AssertionVerificationResultType`                 | `AssertionVerificationResult`               | Implicit[^implicit]        |
-| `AttestationVerificationSuccess`  | `AttestationVerificationSuccessType`              | `AttestationVerificationSuccess`            | Implicit[^implicit]        |
 | `AttestationConveyancePreference` | `EnumMemberType<AttestationConveyancePreference>` | `AttestationConveyancePreferenceStringEnum` | Explicit[^explicit]        |
+| `AttestationVerificationSuccess`  | `AttestationVerificationSuccessType`              | `AttestationVerificationSuccess`            | Implicit[^implicit]        |
+| `AuthenticatorAttachment`         | `AuthenticatorAttachmentType`                     | `AuthenticatorAttachment`                   | Implicit[^implicit]        |
+| `AuthenticatorTransport`          | `AuthenticatorTransportType`                      | `AuthenticatorTransport`                    | Implicit[^implicit]        |
+| `PublicKeyCredentialType`         | `PublicKeyCredentialTypeType`                     | `PublicKeyCredentialType`                   | Implicit[^implicit]        |
+| `UserVerificationRequirement`     | `UserVerificationRequirementType`                 | `UserVerificationRequirement`               | Implicit[^implicit]        |
 
 [^binding]: Defines the type system binding behavior of `HotChocolate`.
 [^implicit]: Implicitly bind type system members.

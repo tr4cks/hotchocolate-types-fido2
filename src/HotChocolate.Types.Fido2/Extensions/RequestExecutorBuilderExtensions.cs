@@ -20,10 +20,15 @@ public static class RequestExecutorBuilderExtensions
             .AddType<AssertionVerificationResultType>()
             .AddType<PublicKeyCredentialAssertionInputType>()
             // todo: sort and add descriptions (auto?)
+            .AddType<AttestationConveyancePreferenceType>()
             .AddType(new EnumMemberType<AttestationConveyancePreference>(WellKnownScalarTypes
                 .AttestationConveyancePreferenceStringEnum))
+            .AddType<PublicKeyCredentialTypeType>()
             .AddType(new EnumMemberType<PublicKeyCredentialType>(WellKnownScalarTypes.PublicKeyCredentialTypeStringEnum))
+            .AddType<AuthenticatorAttachmentType>()
             .AddType(new EnumMemberType<AuthenticatorAttachment>(WellKnownScalarTypes.AuthenticatorAttachmentStringEnum))
+            .AddType<UserVerificationRequirementType>()
             .AddType(new EnumMemberType<UserVerificationRequirement>(WellKnownScalarTypes.UserVerificationRequirementStringEnum))
+            .AddType<AuthenticatorTransportType>()
             .AddType(new EnumMemberType<AuthenticatorTransport>(WellKnownScalarTypes.AuthenticatorTransportStringEnum));
 }
