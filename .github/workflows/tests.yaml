@@ -12,10 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      # todo: why not v3?
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '6.0.x'
       - run: dotnet test --collect:"XPlat Code Coverage"          
       - uses: codecov/codecov-action@v3
         with:
-          files: ./tests/HotChocolate.Types.Fido2.UnitTests/TestResults/*/coverage.cobertura.xml
+          files: tests/HotChocolate.Types.Fido2.UnitTests/TestResults/*/coverage.cobertura.xml
