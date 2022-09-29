@@ -106,11 +106,11 @@ and deduce the relationships using the [table below](#type-mapping-table).
 <!-- TYPE MAPPING TABLE -->
 ## Type Mapping Table
 
-| FIDO2 types                     | HotChocolate types                              | GraphQL types                             | Binding behavior[^binding] |
-|---------------------------------|-------------------------------------------------|-------------------------------------------|----------------------------|
-| AssertionVerificationResult     | AssertionVerificationResultType                 | AssertionVerificationResult               | Implicit[^implicit]        |
-| AttestationVerificationSuccess  | AttestationVerificationSuccessType              | AttestationVerificationSuccess            | Implicit[^implicit]        |
-| AttestationConveyancePreference | EnumMemberType<AttestationConveyancePreference> | AttestationConveyancePreferenceStringEnum | Explicit[^explicit]        |
+| FIDO2 types                       | HotChocolate types                                | GraphQL types                               | Binding behavior[^binding] |
+|-----------------------------------|---------------------------------------------------|---------------------------------------------|----------------------------|
+| `AssertionVerificationResult`     | `AssertionVerificationResultType`                 | `AssertionVerificationResult`               | Implicit[^implicit]        |
+| `AttestationVerificationSuccess`  | `AttestationVerificationSuccessType`              | `AttestationVerificationSuccess`            | Implicit[^implicit]        |
+| `AttestationConveyancePreference` | `EnumMemberType<AttestationConveyancePreference>` | `AttestationConveyancePreferenceStringEnum` | Explicit[^explicit]        |
 
 [^binding]: Defines the type system binding behavior of `HotChocolate`.
 [^implicit]: Implicitly bind type system members.
