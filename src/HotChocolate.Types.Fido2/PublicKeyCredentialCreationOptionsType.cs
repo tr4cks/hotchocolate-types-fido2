@@ -7,110 +7,112 @@ namespace HotChocolate.Types.Fido2;
 // todo: replace Description with resource file
 
 // ReSharper disable once ClassNeverInstantiated.Global
-/// <see href="https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions"/>
 public class PublicKeyCredentialCreationOptionsType : ObjectType<CredentialCreateOptions>
 {
     protected override void Configure(IObjectTypeDescriptor<CredentialCreateOptions> descriptor)
     {
         descriptor.BindFieldsExplicitly()
             .Name(WellKnownObjectTypes.PublicKeyCredentialCreationOptions)
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions)");
+            .Description(ObjectTypeResources.PublicKeyCredentialCreationOptionsType_Description);
 
         descriptor.Field(f => f.Rp)
             .Type<NonNullType<PublicKeyCredentialRpEntityType>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-rp)");
+            .Description(ObjectTypeResources.PublicKeyCredentialCreationOptionsType_Rp_Description);
 
         descriptor.Field(f => f.User)
             .Type<NonNullType<PublicKeyCredentialUserEntityType>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-user)");
+            .Description(ObjectTypeResources.PublicKeyCredentialCreationOptionsType_User_Description);
 
         descriptor.Field(f => f.Challenge)
             .Type<NonNullType<Base64Type>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-challenge)");
+            .Description(ObjectTypeResources.PublicKeyCredentialCreationOptionsType_Challenge_Description);
 
         descriptor.Field(f => f.PubKeyCredParams)
             .Type<NonNullType<ListType<NonNullType<PublicKeyCredentialParametersType>>>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-pubkeycredparams)");
+            .Description(ObjectTypeResources.PublicKeyCredentialCreationOptionsType_PubKeyCredParams_Description);
 
         descriptor.Field(f => f.Timeout)
             .Type<UnsignedLongType>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-timeout)");
+            .Description(ObjectTypeResources.PublicKeyCredentialCreationOptionsType_Timeout_Description);
 
         descriptor.Field(f => f.ExcludeCredentials)
             .Type<ListType<NonNullType<PublicKeyCredentialDescriptorType>>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-excludecredentials)");
+            .Description(ObjectTypeResources.PublicKeyCredentialCreationOptionsType_ExcludeCredentials_Description);
 
         descriptor.Field(f => f.AuthenticatorSelection)
             .Type<AuthenticatorSelectionCriteriaType>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection)");
+            .Description(ObjectTypeResources.PublicKeyCredentialCreationOptionsType_AuthenticatorSelection_Description);
 
         descriptor.Field(f => f.Attestation)
             .Type<EnumMemberType<AttestationConveyancePreference>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestation)");
+            .Description(ObjectTypeResources.PublicKeyCredentialCreationOptionsType_Attestation_Description);
 
         descriptor.Field(f => f.Extensions)
              .Type<AuthenticationExtensionsClientInputsType>()
-             .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-extensions)");
+             .Description(ObjectTypeResources.PublicKeyCredentialCreationOptionsType_Extensions_Description);
     }
 }
 
+// ReSharper disable once ClassNeverInstantiated.Global
 public class PublicKeyCredentialRpEntityType : ObjectType<PublicKeyCredentialRpEntity>
 {
     protected override void Configure(IObjectTypeDescriptor<PublicKeyCredentialRpEntity> descriptor)
     {
         descriptor.BindFieldsExplicitly()
             .Name(WellKnownObjectTypes.PublicKeyCredentialRpEntity)
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dictdef-publickeycredentialrpentity)");
+            .Description(ObjectTypeResources.PublicKeyCredentialRpEntityType_Description);
 
         descriptor.Field(f => f.Id)
             .Type<StringType>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialrpentity-id)");
+            .Description(ObjectTypeResources.PublicKeyCredentialRpEntityType_Id_Description);
 
         descriptor.Field(f => f.Name)
             .Type<NonNullType<StringType>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialentity-name)");
+            .Description(ObjectTypeResources.PublicKeyCredentialRpEntityType_Name_Description);
     }
 }
 
+// ReSharper disable once ClassNeverInstantiated.Global
 public class PublicKeyCredentialParametersType : ObjectType<PubKeyCredParam>
 {
     protected override void Configure(IObjectTypeDescriptor<PubKeyCredParam> descriptor)
     {
         descriptor.BindFieldsExplicitly()
             .Name(WellKnownObjectTypes.PublicKeyCredentialParameters)
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dictdef-publickeycredentialparameters)");
+            .Description(ObjectTypeResources.PublicKeyCredentialParametersType_Description);
 
         descriptor.Field(f => f.Type)
             .Type<NonNullType<EnumMemberType<PublicKeyCredentialType>>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialparameters-type)");
+            .Description(ObjectTypeResources.PublicKeyCredentialParametersType_Type_Description);
 
         descriptor.Field(f => f.Alg)
             .Type<NonNullType<LongType>>()
             .Resolve(context => (long) context.Parent<PubKeyCredParam>().Alg)
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialparameters-alg)");
+            .Description(ObjectTypeResources.PublicKeyCredentialParametersType_Alg_Description);
     }
 }
 
+// ReSharper disable once ClassNeverInstantiated.Global
 public class AuthenticatorSelectionCriteriaType : ObjectType<AuthenticatorSelection>
 {
     protected override void Configure(IObjectTypeDescriptor<AuthenticatorSelection> descriptor)
     {
         descriptor.BindFieldsExplicitly()
             .Name(WellKnownObjectTypes.AuthenticatorSelectionCriteria)
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dictdef-authenticatorselectioncriteria)");
+            .Description(ObjectTypeResources.AuthenticatorSelectionCriteriaType_Description);
 
         descriptor.Field(f => f.AuthenticatorAttachment)
             .Type<EnumMemberType<AuthenticatorAttachment>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-authenticatorattachment)");
+            .Description(ObjectTypeResources.AuthenticatorSelectionCriteriaType_AuthenticatorAttachment_Description);
 
         // ResidentKey is missing
 
         descriptor.Field(f => f.RequireResidentKey)
             .Type<BooleanType>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-requireresidentkey)");
+            .Description(ObjectTypeResources.AuthenticatorSelectionCriteriaType_RequireResidentKey_Description);
 
         descriptor.Field(f => f.UserVerification)
             .Type<EnumMemberType<UserVerificationRequirement>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-userverification)");
+            .Description(ObjectTypeResources.AuthenticatorSelectionCriteriaType_UserVerification_Description);
     }
 }

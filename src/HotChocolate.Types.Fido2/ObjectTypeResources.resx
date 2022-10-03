@@ -19,57 +19,117 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="AttestationConveyancePreferenceType_Description" xml:space="preserve">
-        <value />
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#enumdef-attestationconveyancepreference)</value>
     </data>
     <data name="AttestationConveyancePreferenceType_Direct_Description" xml:space="preserve">
-        <value />
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-attestationconveyancepreference-direct)</value>
     </data>
     <data name="AttestationConveyancePreferenceType_Indirect_Description" xml:space="preserve">
-        <value />
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-attestationconveyancepreference-indirect)</value>
     </data>
     <data name="AttestationConveyancePreferenceType_None_Description" xml:space="preserve">
-        <value />
-    </data>
-    <data name="AuthenticatorAttachmentType_Description" xml:space="preserve">
-        <value />
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-attestationconveyancepreference-none)</value>
     </data>
     <data name="AuthenticatorAttachmentType_CrossPlatform_Description" xml:space="preserve">
-        <value />
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatorattachment-cross-platform)</value>
+    </data>
+    <data name="AuthenticatorAttachmentType_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#enumdef-authenticatorattachment)</value>
     </data>
     <data name="AuthenticatorAttachmentType_Platform_Description" xml:space="preserve">
-        <value />
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatorattachment-platform)</value>
     </data>
-    <data name="AuthenticatorTransportType_Description" xml:space="preserve">
-        <value />
+    <data name="AuthenticatorSelectionCriteriaType_AuthenticatorAttachment_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatorselectioncriteria-authenticatorattachment)</value>
+    </data>
+    <data name="AuthenticatorSelectionCriteriaType_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dictdef-authenticatorselectioncriteria)</value>
+    </data>
+    <data name="AuthenticatorSelectionCriteriaType_RequireResidentKey_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatorselectioncriteria-requireresidentkey)</value>
+    </data>
+    <data name="AuthenticatorSelectionCriteriaType_UserVerification_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatorselectioncriteria-userverification)</value>
     </data>
     <data name="AuthenticatorTransportType_Ble_Description" xml:space="preserve">
-        <value />
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatortransport-ble)</value>
+    </data>
+    <data name="AuthenticatorTransportType_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#enumdef-authenticatortransport)</value>
     </data>
     <data name="AuthenticatorTransportType_Internal_Description" xml:space="preserve">
-        <value />
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatortransport-internal)</value>
     </data>
     <data name="AuthenticatorTransportType_Nfc_Description" xml:space="preserve">
-        <value />
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatortransport-nfc)</value>
     </data>
     <data name="AuthenticatorTransportType_Usb_Description" xml:space="preserve">
-        <value />
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatortransport-usb)</value>
+    </data>
+    <data name="PublicKeyCredentialCreationOptionsType_Attestation_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialcreationoptions-attestation)</value>
+    </data>
+    <data name="PublicKeyCredentialCreationOptionsType_AuthenticatorSelection_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialcreationoptions-authenticatorselection)</value>
+    </data>
+    <data name="PublicKeyCredentialCreationOptionsType_Challenge_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialcreationoptions-challenges)</value>
+    </data>
+    <data name="PublicKeyCredentialCreationOptionsType_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dictdef-publickeycredentialcreationoptions)</value>
+    </data>
+    <data name="PublicKeyCredentialCreationOptionsType_ExcludeCredentials_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialcreationoptions-excludecredentials)</value>
+    </data>
+    <data name="PublicKeyCredentialCreationOptionsType_Extensions_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialcreationoptions-extensions)</value>
+    </data>
+    <data name="PublicKeyCredentialCreationOptionsType_PubKeyCredParams_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialcreationoptions-pubkeycredparams)</value>
+    </data>
+    <data name="PublicKeyCredentialCreationOptionsType_Rp_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialcreationoptions-rp)</value>
+    </data>
+    <data name="PublicKeyCredentialCreationOptionsType_Timeout_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialcreationoptions-timeout)</value>
+    </data>
+    <data name="PublicKeyCredentialCreationOptionsType_User_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialcreationoptions-user)</value>
+    </data>
+    <data name="PublicKeyCredentialParametersType_Alg_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialparameters-alg)</value>
+    </data>
+    <data name="PublicKeyCredentialParametersType_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dictdef-publickeycredentialparameters)</value>
+    </data>
+    <data name="PublicKeyCredentialParametersType_Type_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialparameters-type)</value>
+    </data>
+    <data name="PublicKeyCredentialRpEntityType_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dictdef-publickeycredentialrpentity)</value>
+    </data>
+    <data name="PublicKeyCredentialRpEntityType_Id_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialrpentity-id)</value>
+    </data>
+    <data name="PublicKeyCredentialRpEntityType_Name_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialentity-name)</value>
     </data>
     <data name="PublicKeyCredentialTypeType_Description" xml:space="preserve">
-        <value />
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#enumdef-publickeycredentialtype)</value>
     </data>
     <data name="PublicKeyCredentialTypeType_PublicKey_Description" xml:space="preserve">
-        <value />
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialtype-public-key)</value>
     </data>
     <data name="UserVerificationRequirementType_Description" xml:space="preserve">
-        <value />
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#enumdef-userverificationrequirement)</value>
     </data>
     <data name="UserVerificationRequirementType_Discouraged_Description" xml:space="preserve">
-        <value />
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-userverificationrequirement-discouraged)</value>
     </data>
     <data name="UserVerificationRequirementType_Preferred_Description" xml:space="preserve">
-        <value />
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-userverificationrequirement-preferred)</value>
     </data>
     <data name="UserVerificationRequirementType_Required_Description" xml:space="preserve">
-        <value />
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-userverificationrequirement-required)</value>
     </data>
 </root>
