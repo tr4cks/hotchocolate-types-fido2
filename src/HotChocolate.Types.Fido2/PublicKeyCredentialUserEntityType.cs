@@ -10,18 +10,18 @@ public class PublicKeyCredentialUserEntityType : ObjectType<Fido2User>
     {
         descriptor.BindFieldsExplicitly()
             .Name(WellKnownObjectTypes.PublicKeyCredentialUserEntity)
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dictdef-publickeycredentialuserentity)");
+            .Description(ObjectTypeResources.PublicKeyCredentialUserEntityType_Description);
 
         descriptor.Field(f => f.Id)
             .Type<NonNullType<Base64Type>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialuserentity-id)");
+            .Description(ObjectTypeResources.PublicKeyCredentialUserEntityType_Id_Description);
 
         descriptor.Field(f => f.DisplayName)
             .Type<NonNullType<StringType>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialuserentity-displayname)");
+            .Description(ObjectTypeResources.PublicKeyCredentialUserEntityType_DisplayName_Description);
 
         descriptor.Field(f => f.Name)
             .Type<NonNullType<StringType>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredentialentity-name)");
+            .Description(ObjectTypeResources.PublicKeyCredentialUserEntityType_Name_Description);
     }
 }

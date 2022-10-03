@@ -69,6 +69,54 @@ namespace HotChocolate.Types.Fido2 {
             }
         }
         
+        internal static string AuthenticatorAssertionResponseInputType_AuthenticatorData_Description {
+            get {
+                return ResourceManager.GetString("AuthenticatorAssertionResponseInputType_AuthenticatorData_Description", resourceCulture);
+            }
+        }
+        
+        internal static string AuthenticatorAssertionResponseInputType_ClientDataJson_Description {
+            get {
+                return ResourceManager.GetString("AuthenticatorAssertionResponseInputType_ClientDataJson_Description", resourceCulture);
+            }
+        }
+        
+        internal static string AuthenticatorAssertionResponseInputType_Description {
+            get {
+                return ResourceManager.GetString("AuthenticatorAssertionResponseInputType_Description", resourceCulture);
+            }
+        }
+        
+        internal static string AuthenticatorAssertionResponseInputType_Signature_Description {
+            get {
+                return ResourceManager.GetString("AuthenticatorAssertionResponseInputType_Signature_Description", resourceCulture);
+            }
+        }
+        
+        internal static string AuthenticatorAssertionResponseInputType_UserHandle_Description {
+            get {
+                return ResourceManager.GetString("AuthenticatorAssertionResponseInputType_UserHandle_Description", resourceCulture);
+            }
+        }
+        
+        internal static string AuthenticatorAttestationResponseInputType_AttestationObject_Description {
+            get {
+                return ResourceManager.GetString("AuthenticatorAttestationResponseInputType_AttestationObject_Description", resourceCulture);
+            }
+        }
+        
+        internal static string AuthenticatorAttestationResponseInputType_ClientDataJson_Description {
+            get {
+                return ResourceManager.GetString("AuthenticatorAttestationResponseInputType_ClientDataJson_Description", resourceCulture);
+            }
+        }
+        
+        internal static string AuthenticatorAttestationResponseInputType_Description {
+            get {
+                return ResourceManager.GetString("AuthenticatorAttestationResponseInputType_Description", resourceCulture);
+            }
+        }
+        
         internal static string AuthenticatorAttachmentType_CrossPlatform_Description {
             get {
                 return ResourceManager.GetString("AuthenticatorAttachmentType_CrossPlatform_Description", resourceCulture);
@@ -141,6 +189,78 @@ namespace HotChocolate.Types.Fido2 {
             }
         }
         
+        internal static string PublicKeyCredentialAssertionInputType_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialAssertionInputType_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialAssertionInputType_Extensions_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialAssertionInputType_Extensions_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialAssertionInputType_Id_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialAssertionInputType_Id_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialAssertionInputType_RawId_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialAssertionInputType_RawId_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialAssertionInputType_Response_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialAssertionInputType_Response_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialAssertionInputType_Type_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialAssertionInputType_Type_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialAttestationInputType_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialAttestationInputType_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialAttestationInputType_Extensions_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialAttestationInputType_Extensions_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialAttestationInputType_Id_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialAttestationInputType_Id_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialAttestationInputType_RawId_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialAttestationInputType_RawId_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialAttestationInputType_Response_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialAttestationInputType_Response_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialAttestationInputType_Type_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialAttestationInputType_Type_Description", resourceCulture);
+            }
+        }
+        
         internal static string PublicKeyCredentialCreationOptionsType_Attestation_Description {
             get {
                 return ResourceManager.GetString("PublicKeyCredentialCreationOptionsType_Attestation_Description", resourceCulture);
@@ -201,6 +321,30 @@ namespace HotChocolate.Types.Fido2 {
             }
         }
         
+        internal static string PublicKeyCredentialDescriptorType_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialDescriptorType_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialDescriptorType_Id_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialDescriptorType_Id_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialDescriptorType_Transports_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialDescriptorType_Transports_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialDescriptorType_Type_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialDescriptorType_Type_Description", resourceCulture);
+            }
+        }
+        
         internal static string PublicKeyCredentialParametersType_Alg_Description {
             get {
                 return ResourceManager.GetString("PublicKeyCredentialParametersType_Alg_Description", resourceCulture);
@@ -216,6 +360,48 @@ namespace HotChocolate.Types.Fido2 {
         internal static string PublicKeyCredentialParametersType_Type_Description {
             get {
                 return ResourceManager.GetString("PublicKeyCredentialParametersType_Type_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialRequestOptionsType_AllowCredentials_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialRequestOptionsType_AllowCredentials_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialRequestOptionsType_Challenge_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialRequestOptionsType_Challenge_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialRequestOptionsType_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialRequestOptionsType_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialRequestOptionsType_Extensions_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialRequestOptionsType_Extensions_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialRequestOptionsType_RpId_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialRequestOptionsType_RpId_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialRequestOptionsType_Timeout_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialRequestOptionsType_Timeout_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialRequestOptionsType_UserVerification_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialRequestOptionsType_UserVerification_Description", resourceCulture);
             }
         }
         
@@ -246,6 +432,30 @@ namespace HotChocolate.Types.Fido2 {
         internal static string PublicKeyCredentialTypeType_PublicKey_Description {
             get {
                 return ResourceManager.GetString("PublicKeyCredentialTypeType_PublicKey_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialUserEntityType_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialUserEntityType_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialUserEntityType_DisplayName_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialUserEntityType_DisplayName_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialUserEntityType_Id_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialUserEntityType_Id_Description", resourceCulture);
+            }
+        }
+        
+        internal static string PublicKeyCredentialUserEntityType_Name_Description {
+            get {
+                return ResourceManager.GetString("PublicKeyCredentialUserEntityType_Name_Description", resourceCulture);
             }
         }
         

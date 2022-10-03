@@ -4,8 +4,6 @@ using HotChocolate.Types.Fido2.Scalars;
 
 namespace HotChocolate.Types.Fido2;
 
-// todo: replace Description with resource file
-
 // ReSharper disable once ClassNeverInstantiated.Global
 public class PublicKeyCredentialCreationOptionsType : ObjectType<CredentialCreateOptions>
 {

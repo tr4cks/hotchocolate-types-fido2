@@ -30,6 +30,30 @@
     <data name="AttestationConveyancePreferenceType_None_Description" xml:space="preserve">
         <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-attestationconveyancepreference-none)</value>
     </data>
+    <data name="AuthenticatorAssertionResponseInputType_AuthenticatorData_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatorassertionresponse-authenticatordata)</value>
+    </data>
+    <data name="AuthenticatorAssertionResponseInputType_ClientDataJson_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatorresponse-clientdatajson)</value>
+    </data>
+    <data name="AuthenticatorAssertionResponseInputType_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dictdef-authenticationextensionsclientoutputs)</value>
+    </data>
+    <data name="AuthenticatorAssertionResponseInputType_Signature_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatorassertionresponse-signature)</value>
+    </data>
+    <data name="AuthenticatorAssertionResponseInputType_UserHandle_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatorassertionresponse-userhandle)</value>
+    </data>
+    <data name="AuthenticatorAttestationResponseInputType_AttestationObject_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatorattestationresponse-attestationobject)</value>
+    </data>
+    <data name="AuthenticatorAttestationResponseInputType_ClientDataJson_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatorresponse-clientdatajson)</value>
+    </data>
+    <data name="AuthenticatorAttestationResponseInputType_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#iface-authenticatorattestationresponse)</value>
+    </data>
     <data name="AuthenticatorAttachmentType_CrossPlatform_Description" xml:space="preserve">
         <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatorattachment-cross-platform)</value>
     </data>
@@ -66,6 +90,42 @@
     <data name="AuthenticatorTransportType_Usb_Description" xml:space="preserve">
         <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatortransport-usb)</value>
     </data>
+    <data name="PublicKeyCredentialAssertionInputType_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#publickeycredential)</value>
+    </data>
+    <data name="PublicKeyCredentialAssertionInputType_Extensions_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredential-getclientextensionresults)</value>
+    </data>
+    <data name="PublicKeyCredentialAssertionInputType_Id_Description" xml:space="preserve">
+        <value>[Documentation](https://w3c.github.io/webappsec-credential-management/#dom-credential-id)</value>
+    </data>
+    <data name="PublicKeyCredentialAssertionInputType_RawId_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredential-rawid)</value>
+    </data>
+    <data name="PublicKeyCredentialAssertionInputType_Response_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredential-response)</value>
+    </data>
+    <data name="PublicKeyCredentialAssertionInputType_Type_Description" xml:space="preserve">
+        <value>[Documentation](https://w3c.github.io/webappsec-credential-management/#dom-credential-type)</value>
+    </data>
+    <data name="PublicKeyCredentialAttestationInputType_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#publickeycredential)</value>
+    </data>
+    <data name="PublicKeyCredentialAttestationInputType_Extensions_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredential-getclientextensionresults)</value>
+    </data>
+    <data name="PublicKeyCredentialAttestationInputType_Id_Description" xml:space="preserve">
+        <value>[Documentation](https://w3c.github.io/webappsec-credential-management/#dom-credential-id)</value>
+    </data>
+    <data name="PublicKeyCredentialAttestationInputType_RawId_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredential-rawid)</value>
+    </data>
+    <data name="PublicKeyCredentialAttestationInputType_Response_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredential-response)</value>
+    </data>
+    <data name="PublicKeyCredentialAttestationInputType_Type_Description" xml:space="preserve">
+        <value>[Documentation](https://w3c.github.io/webappsec-credential-management/#dom-credential-type)</value>
+    </data>
     <data name="PublicKeyCredentialCreationOptionsType_Attestation_Description" xml:space="preserve">
         <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialcreationoptions-attestation)</value>
     </data>
@@ -96,6 +156,18 @@
     <data name="PublicKeyCredentialCreationOptionsType_User_Description" xml:space="preserve">
         <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialcreationoptions-user)</value>
     </data>
+    <data name="PublicKeyCredentialDescriptorType_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dictionary-credential-descriptor)</value>
+    </data>
+    <data name="PublicKeyCredentialDescriptorType_Id_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialdescriptor-id)</value>
+    </data>
+    <data name="PublicKeyCredentialDescriptorType_Transports_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialdescriptor-transports)</value>
+    </data>
+    <data name="PublicKeyCredentialDescriptorType_Type_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialdescriptor-type)</value>
+    </data>
     <data name="PublicKeyCredentialParametersType_Alg_Description" xml:space="preserve">
         <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialparameters-alg)</value>
     </data>
@@ -104,6 +176,27 @@
     </data>
     <data name="PublicKeyCredentialParametersType_Type_Description" xml:space="preserve">
         <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialparameters-type)</value>
+    </data>
+    <data name="PublicKeyCredentialRequestOptionsType_AllowCredentials_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialrequestoptions-allowcredentials)</value>
+    </data>
+    <data name="PublicKeyCredentialRequestOptionsType_Challenge_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialrequestoptions-challenge)</value>
+    </data>
+    <data name="PublicKeyCredentialRequestOptionsType_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dictdef-publickeycredentialrequestoptions)</value>
+    </data>
+    <data name="PublicKeyCredentialRequestOptionsType_Extensions_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialrequestoptions-extensions)</value>
+    </data>
+    <data name="PublicKeyCredentialRequestOptionsType_RpId_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialrequestoptions-rpid)</value>
+    </data>
+    <data name="PublicKeyCredentialRequestOptionsType_Timeout_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialrequestoptions-timeout)</value>
+    </data>
+    <data name="PublicKeyCredentialRequestOptionsType_UserVerification_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialrequestoptions-userverification)</value>
     </data>
     <data name="PublicKeyCredentialRpEntityType_Description" xml:space="preserve">
         <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dictdef-publickeycredentialrpentity)</value>
@@ -119,6 +212,18 @@
     </data>
     <data name="PublicKeyCredentialTypeType_PublicKey_Description" xml:space="preserve">
         <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialtype-public-key)</value>
+    </data>
+    <data name="PublicKeyCredentialUserEntityType_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dictdef-publickeycredentialuserentity)</value>
+    </data>
+    <data name="PublicKeyCredentialUserEntityType_DisplayName_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialuserentity-displayname)</value>
+    </data>
+    <data name="PublicKeyCredentialUserEntityType_Id_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialuserentity-id)</value>
+    </data>
+    <data name="PublicKeyCredentialUserEntityType_Name_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialentity-name)</value>
     </data>
     <data name="UserVerificationRequirementType_Description" xml:space="preserve">
         <value>[Documentation](https://www.w3.org/TR/webauthn-2/#enumdef-userverificationrequirement)</value>

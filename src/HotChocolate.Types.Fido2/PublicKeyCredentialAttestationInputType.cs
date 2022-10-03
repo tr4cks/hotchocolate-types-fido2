@@ -11,27 +11,27 @@ public class PublicKeyCredentialAttestationInputType : InputObjectType<Authentic
     {
         descriptor.BindFieldsExplicitly()
             .Name(WellKnownObjectTypes.PublicKeyCredentialAttestationInput)
-            .Description("[Description](https://w3c.github.io/webauthn/#publickeycredential)");
+            .Description(ObjectTypeResources.PublicKeyCredentialAttestationInputType_Description);
 
         descriptor.Field(f => f.Id)
             .Type<NonNullType<Base64Type>>()
-            .Description("[Documentation](https://w3c.github.io/webappsec-credential-management/#dom-credential-id)");
+            .Description(ObjectTypeResources.PublicKeyCredentialAttestationInputType_Id_Description);
 
         descriptor.Field(f => f.Type)
             .Type<NonNullType<EnumMemberType<PublicKeyCredentialType>>>()
-            .Description("[Documentation](https://w3c.github.io/webappsec-credential-management/#dom-credential-type)");
+            .Description(ObjectTypeResources.PublicKeyCredentialAttestationInputType_Type_Description);
 
         descriptor.Field(f => f.RawId)
             .Type<NonNullType<Base64Type>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredential-rawid)");
+            .Description(ObjectTypeResources.PublicKeyCredentialAttestationInputType_RawId_Description);
 
         descriptor.Field(f => f.Response)
             .Type<NonNullType<AuthenticatorAttestationResponseInputType>>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dom-publickeycredential-response)");
+            .Description(ObjectTypeResources.PublicKeyCredentialAttestationInputType_Response_Description);
 
         descriptor.Field(f => f.Extensions)
             .Type<AuthenticationExtensionsClientOutputsType>()
-            .Description("[Documentation](https://w3c.github.io/webauthn/#dictdef-authenticationextensionsclientoutputs)");
+            .Description(ObjectTypeResources.PublicKeyCredentialAttestationInputType_Extensions_Description);
     }
 }
 
@@ -42,15 +42,15 @@ public class AuthenticatorAttestationResponseInputType : InputObjectType<Authent
     {
         descriptor.BindFieldsExplicitly()
             .Name(WellKnownObjectTypes.AuthenticatorAttestationResponseInput)
-            .Description("[Description](https://w3c.github.io/webauthn/#authenticatorattestationresponse)");
+            .Description(ObjectTypeResources.AuthenticatorAttestationResponseInputType_Description);
 
         descriptor.Field(f => f.ClientDataJson)
             .Name("clientDataJSON")
             .Type<NonNullType<Base64Type>>()
-            .Description("[Description](https://w3c.github.io/webauthn/#dom-authenticatorresponse-clientdatajson)");
+            .Description(ObjectTypeResources.AuthenticatorAttestationResponseInputType_ClientDataJson_Description);
 
         descriptor.Field(f => f.AttestationObject)
             .Type<Base64Type>()
-            .Description("[Description](https://w3c.github.io/webauthn/#dom-authenticatorattestationresponse-attestationobject)");
+            .Description(ObjectTypeResources.AuthenticatorAttestationResponseInputType_AttestationObject_Description);
     }
 }
