@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace HotChocolate.Types.Fido2.Scalars;
 
+[ExcludeFromCodeCoverage]
 internal static class ThrowHelper
 {
     public static SerializationException Base64_ParseValue_IsInvalid(IType type)
