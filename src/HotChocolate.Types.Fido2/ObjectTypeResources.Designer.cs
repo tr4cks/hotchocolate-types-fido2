@@ -45,6 +45,12 @@ namespace HotChocolate.Types.Fido2 {
             }
         }
         
+        internal static string AssertionVerificationResultType_Description {
+            get {
+                return ResourceManager.GetString("AssertionVerificationResultType_Description", resourceCulture);
+            }
+        }
+        
         internal static string AttestationConveyancePreferenceType_Description {
             get {
                 return ResourceManager.GetString("AttestationConveyancePreferenceType_Description", resourceCulture);
@@ -66,6 +72,12 @@ namespace HotChocolate.Types.Fido2 {
         internal static string AttestationConveyancePreferenceType_None_Description {
             get {
                 return ResourceManager.GetString("AttestationConveyancePreferenceType_None_Description", resourceCulture);
+            }
+        }
+        
+        internal static string AttestationVerificationSuccessType_Description {
+            get {
+                return ResourceManager.GetString("AttestationVerificationSuccessType_Description", resourceCulture);
             }
         }
         

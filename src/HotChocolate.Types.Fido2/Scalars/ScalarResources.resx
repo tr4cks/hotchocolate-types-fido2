@@ -18,6 +18,12 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
+    <data name="AuthenticationExtensionsClientInputsType_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#iface-authentication-extensions-client-inputs)</value>
+    </data>
+    <data name="AuthenticationExtensionsClientOutputsType_Description" xml:space="preserve">
+        <value>[Documentation](https://www.w3.org/TR/webauthn-2/#iface-authentication-extensions-client-outputs)</value>
+    </data>
     <data name="Base64Type_Description" xml:space="preserve">
         <value>The Base64 scalar type represents a string encoded in base64.</value>
     </data>

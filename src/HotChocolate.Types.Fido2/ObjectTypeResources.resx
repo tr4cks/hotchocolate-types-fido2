@@ -18,6 +18,9 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
+    <data name="AssertionVerificationResultType_Description" xml:space="preserve">
+        <value>Result of the MakeAssertion verification.</value>
+    </data>
     <data name="AttestationConveyancePreferenceType_Description" xml:space="preserve">
         <value>[Documentation](https://www.w3.org/TR/webauthn-2/#enumdef-attestationconveyancepreference)</value>
     </data>
@@ -29,6 +32,9 @@
     </data>
     <data name="AttestationConveyancePreferenceType_None_Description" xml:space="preserve">
         <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-attestationconveyancepreference-none)</value>
+    </data>
+    <data name="AttestationVerificationSuccessType_Description" xml:space="preserve">
+        <value>Holds parsed credential data.</value>
     </data>
     <data name="AuthenticatorAssertionResponseInputType_AuthenticatorData_Description" xml:space="preserve">
         <value>[Documentation](https://www.w3.org/TR/webauthn-2/#dom-authenticatorassertionresponse-authenticatordata)</value>

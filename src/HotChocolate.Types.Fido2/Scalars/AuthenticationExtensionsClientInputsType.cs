@@ -4,11 +4,12 @@ using Fido2NetLib.Objects;
 
 namespace HotChocolate.Types.Fido2.Scalars;
 
+// ReSharper disable once ClassNeverInstantiated.Global
 internal class AuthenticationExtensionsClientInputsType : TypedDictionaryType<AuthenticationExtensionsClientInputs>
 {
-    // todo: add description
     public AuthenticationExtensionsClientInputsType() : base(WellKnownScalarTypes.AuthenticationExtensionsClientInputs)
     {
+        Description = ScalarResources.AuthenticationExtensionsClientInputsType_Description;
     }
 
     protected override bool TrySerialize(AuthenticationExtensionsClientInputs runtimeValue, [NotNullWhen(true)] out IReadOnlyDictionary<string, object?>? resultValue)

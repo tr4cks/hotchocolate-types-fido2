@@ -45,6 +45,18 @@ namespace HotChocolate.Types.Fido2.Scalars {
             }
         }
         
+        internal static string AuthenticationExtensionsClientInputsType_Description {
+            get {
+                return ResourceManager.GetString("AuthenticationExtensionsClientInputsType_Description", resourceCulture);
+            }
+        }
+        
+        internal static string AuthenticationExtensionsClientOutputsType_Description {
+            get {
+                return ResourceManager.GetString("AuthenticationExtensionsClientOutputsType_Description", resourceCulture);
+            }
+        }
+        
         internal static string Base64Type_Description {
             get {
                 return ResourceManager.GetString("Base64Type_Description", resourceCulture);

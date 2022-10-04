@@ -3,14 +3,14 @@ using HotChocolate.Types.Fido2.Scalars;
 
 namespace HotChocolate.Types.Fido2;
 
+// ReSharper disable once ClassNeverInstantiated.Global
 public class AttestationVerificationSuccessType : ObjectType<AttestationVerificationSuccess>
 {
     protected override void Configure(IObjectTypeDescriptor<AttestationVerificationSuccess> descriptor)
     {
-        // todo: documentation
-
         descriptor.BindFieldsExplicitly()
-            .Name(WellKnownObjectTypes.AttestationVerificationSuccess);
+            .Name(WellKnownObjectTypes.AttestationVerificationSuccess)
+            .Description(ObjectTypeResources.AttestationVerificationSuccessType_Description);
 
         // AssertionVerificationResult
         descriptor.Field(f => f.CredentialId)
