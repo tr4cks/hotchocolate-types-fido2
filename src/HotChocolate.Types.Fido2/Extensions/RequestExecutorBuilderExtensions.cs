@@ -8,6 +8,13 @@ namespace HotChocolate.Types.Fido2.Extensions;
 
 public static class RequestExecutorBuilderExtensions
 {
+    private static EnumMemberType<TEnum> CreateWebAuthnEnum<TEnum>(
+        string name,
+        string originalName)
+        where TEnum : struct, Enum => new(name,
+        string.Format(ScalarResources.EnumMemberType_WebAuthn_Description, originalName,
+            string.Join(", ", EnumNameMapper<TEnum>.GetNames().Select(x => $"`{x}`"))));
+
     public static IRequestExecutorBuilder AddFido2(this IRequestExecutorBuilder @this) =>
         @this
             // Register IFido2 service
@@ -25,15 +32,24 @@ public static class RequestExecutorBuilderExtensions
             .AddType<PublicKeyCredentialRequestOptionsType>()
 
             // Fido2 enum types
-            // todo: Add descriptions to enum strings (auto?)
             .AddType<AttestationConveyancePreferenceType>()
-            .AddType(new EnumMemberType<AttestationConveyancePreference>(WellKnownScalarTypes.AttestationConveyancePreferenceStringEnum))
+            .AddType(CreateWebAuthnEnum<AttestationConveyancePreference>(
+                WellKnownScalarTypes.AttestationConveyancePreferenceStringEnum,
+                WellKnownObjectTypes.AttestationConveyancePreference))
             .AddType<AuthenticatorAttachmentType>()
-            .AddType(new EnumMemberType<AuthenticatorAttachment>(WellKnownScalarTypes.AuthenticatorAttachmentStringEnum))
+            .AddType(CreateWebAuthnEnum<AuthenticatorAttachment>(
+                WellKnownScalarTypes.AuthenticatorAttachmentStringEnum,
+                WellKnownObjectTypes.AuthenticatorAttachment))
             .AddType<AuthenticatorTransportType>()
-            .AddType(new EnumMemberType<AuthenticatorTransport>(WellKnownScalarTypes.AuthenticatorTransportStringEnum))
+            .AddType(CreateWebAuthnEnum<AuthenticatorTransport>(
+                WellKnownScalarTypes.AuthenticatorTransportStringEnum,
+                WellKnownObjectTypes.AuthenticatorTransport))
             .AddType<PublicKeyCredentialTypeType>()
-            .AddType(new EnumMemberType<PublicKeyCredentialType>(WellKnownScalarTypes.PublicKeyCredentialTypeStringEnum))
+            .AddType(CreateWebAuthnEnum<PublicKeyCredentialType>(
+                WellKnownScalarTypes.PublicKeyCredentialTypeStringEnum,
+                WellKnownObjectTypes.PublicKeyCredentialType))
             .AddType<UserVerificationRequirementType>()
-            .AddType(new EnumMemberType<UserVerificationRequirement>(WellKnownScalarTypes.UserVerificationRequirementStringEnum));
+            .AddType(CreateWebAuthnEnum<UserVerificationRequirement>(
+                WellKnownScalarTypes.UserVerificationRequirementStringEnum,
+                WellKnownObjectTypes.UserVerificationRequirement));
 }

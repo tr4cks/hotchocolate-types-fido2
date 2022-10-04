@@ -27,6 +27,10 @@
     <data name="Base64Type_IsInvalid_ParseValue" xml:space="preserve">
         <value>Base64Type cannot parse the provided value. The provided value is not encoded in base 64.</value>
     </data>
+    <data name="EnumMemberType_WebAuthn_Description" xml:space="preserve">
+        <value>Represents the `{0}` enumeration as a string according to the FIDO2/WebAuthn specification.
+Possible values: {1}.</value>
+    </data>
     <data name="EnumMemberType_IsInvalid_ParseLiteral" xml:space="preserve">
         <value>EnumMemberType cannot parse the provided literal. The provided value is not encoded in base 64.</value>
     </data>
