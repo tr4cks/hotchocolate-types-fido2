@@ -61,9 +61,7 @@ internal class DictionaryToObjectValueConverter : DictionaryVisitor<ConverterCon
             bool b => new BooleanValueNode(b),
             sbyte s => new IntValueNode(s),
             byte b => new IntValueNode(b),
-            // todo: move this string inside resource file
-            // Unable to convert type from `{0}` to `{1}`
-            _ => throw new NotSupportedException()
+            _ => throw new NotSupportedException(string.Format(TypeResources.TypeConversion_ConvertNotSupported, value.GetType().Name, nameof(IValueNode)))
         };
     }
 }
