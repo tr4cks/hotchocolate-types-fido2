@@ -19,9 +19,6 @@ internal static class WellKnownScalarTypes
 
     public const string Base64 = nameof(Base64);
 
-    // todo: review usage of EnumMember
-    public const string EnumMember = nameof(EnumMember);
-
     public const string PublicKeyCredentialTypeStringEnum =
         nameof(PublicKeyCredentialTypeStringEnum);
 

@@ -27,26 +27,24 @@ internal static class ThrowHelper
             type);
     }
 
-    // todo: update error message
-    public static SerializationException EnumMember_ParseValue_IsInvalid(IType type)
+    public static SerializationException EnumMember_ParseValue_IsInvalid(IType type, string enumTypeName)
     {
         return new SerializationException(
             ErrorBuilder.New()
-                .SetMessage(ScalarResources.EnumMemberType_IsInvalid_ParseValue)
+                .SetMessage(string.Format(ScalarResources.EnumMemberType_IsInvalid_ParseValue, enumTypeName))
                 .SetCode(ErrorCodes.Scalars.InvalidRuntimeType)
-                .SetExtension("actualType", WellKnownScalarTypes.EnumMember)
+                .SetExtension("actualType", type.TypeName().ToString())
                 .Build(),
             type);
     }
 
-    // todo: update error message
-    public static SerializationException EnumMember_ParseLiteral_IsInvalid(IType type)
+    public static SerializationException EnumMember_ParseLiteral_IsInvalid(IType type, string enumTypeName)
     {
         return new SerializationException(
             ErrorBuilder.New()
-                .SetMessage(ScalarResources.EnumMemberType_IsInvalid_ParseLiteral)
+                .SetMessage(string.Format(ScalarResources.EnumMemberType_IsInvalid_ParseLiteral, enumTypeName))
                 .SetCode(ErrorCodes.Scalars.InvalidSyntaxFormat)
-                .SetExtension("actualType", WellKnownScalarTypes.EnumMember)
+                .SetExtension("actualType", type.TypeName().ToString())
                 .Build(),
             type);
     }

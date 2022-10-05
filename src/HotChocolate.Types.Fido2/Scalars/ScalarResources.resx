@@ -38,9 +38,9 @@
 Possible values: {1}.</value>
     </data>
     <data name="EnumMemberType_IsInvalid_ParseLiteral" xml:space="preserve">
-        <value>EnumMemberType cannot parse the provided literal. The provided value is not encoded in base 64.</value>
+        <value>EnumMemberType&lt;{0}&gt; cannot parse the provided literal.</value>
     </data>
     <data name="EnumMemberType_IsInvalid_ParseValue" xml:space="preserve">
-        <value>EnumMemberType cannot parse the provided value. The provided value is not encoded in base 64.</value>
+        <value>EnumMemberType&lt;{0}&gt; cannot parse the provided value.</value>
     </data>
 </root>

@@ -29,7 +29,7 @@ public class EnumMemberType<TEnum> : ScalarType<TEnum, StringValueNode> where TE
 
             TEnum value => ParseValue(value),
 
-            _ => throw ThrowHelper.EnumMember_ParseValue_IsInvalid(this)
+            _ => throw ThrowHelper.EnumMember_ParseValue_IsInvalid(this, typeof(TEnum).Name)
         };
     }
 
@@ -40,7 +40,7 @@ public class EnumMemberType<TEnum> : ScalarType<TEnum, StringValueNode> where TE
         {
             return (TEnum) value;
         }
-        throw ThrowHelper.EnumMember_ParseLiteral_IsInvalid(this);
+        throw ThrowHelper.EnumMember_ParseLiteral_IsInvalid(this, typeof(TEnum).Name);
     }
 
     /// <inheritdoc />
