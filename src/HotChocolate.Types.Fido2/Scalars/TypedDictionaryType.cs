@@ -28,8 +28,7 @@ internal abstract class TypedDictionaryType<TRuntimeType> : ScalarType<TRuntimeT
 
             TRuntimeType value => ParseValue(value),
 
-            // todo: review exception
-            _ => throw new Exception()
+            _ => throw ThrowHelper.TypedDictionary_ParseValue_IsInvalid(this, typeof(TRuntimeType).Name)
         };
     }
 
@@ -41,8 +40,7 @@ internal abstract class TypedDictionaryType<TRuntimeType> : ScalarType<TRuntimeT
         {
             return value;
         }
-        // todo: review exception
-        throw new Exception();
+        throw ThrowHelper.TypedDictionary_ParseLiteral_IsInvalid(this, typeof(TRuntimeType).Name);
     }
 
     /// <inheritdoc />
@@ -52,9 +50,7 @@ internal abstract class TypedDictionaryType<TRuntimeType> : ScalarType<TRuntimeT
         {
             return _dictionaryToObjectValueConverter.Convert(dict);
         }
-
-        // todo: review exception
-        throw new Exception();
+        throw ThrowHelper.TypedDictionary_ParseValue_IsInvalid(this, typeof(TRuntimeType).Name);
     }
 
     /// <inheritdoc />

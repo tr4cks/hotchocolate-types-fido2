@@ -92,5 +92,17 @@ namespace HotChocolate.Types.Fido2.Scalars {
                 return ResourceManager.GetString("EnumMemberType_IsInvalid_ParseValue", resourceCulture);
             }
         }
+        
+        internal static string TypedDictionaryType_IsInvalid_ParseLiteral {
+            get {
+                return ResourceManager.GetString("TypedDictionaryType_IsInvalid_ParseLiteral", resourceCulture);
+            }
+        }
+        
+        internal static string TypedDictionaryType_IsInvalid_ParseValue {
+            get {
+                return ResourceManager.GetString("TypedDictionaryType_IsInvalid_ParseValue", resourceCulture);
+            }
+        }
     }
 }

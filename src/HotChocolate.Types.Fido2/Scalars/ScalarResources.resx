@@ -43,4 +43,10 @@ Possible values: {1}.</value>
     <data name="EnumMemberType_IsInvalid_ParseValue" xml:space="preserve">
         <value>EnumMemberType&lt;{0}&gt; cannot parse the provided value.</value>
     </data>
+    <data name="TypedDictionaryType_IsInvalid_ParseLiteral" xml:space="preserve">
+        <value>TypedDictionaryType&lt;{0}&gt; cannot parse the provided literal.</value>
+    </data>
+    <data name="TypedDictionaryType_IsInvalid_ParseValue" xml:space="preserve">
+        <value>TypedDictionaryType&lt;{0}&gt; cannot parse the provided value.</value>
+    </data>
 </root>
