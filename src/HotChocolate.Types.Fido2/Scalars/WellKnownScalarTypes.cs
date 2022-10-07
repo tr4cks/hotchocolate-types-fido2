@@ -17,7 +17,7 @@ internal static class WellKnownScalarTypes
     public const string AuthenticatorTransportStringEnum =
         nameof(AuthenticatorTransportStringEnum);
 
-    public const string Base64 = nameof(Base64);
+    public const string Base64Url = nameof(Base64Url);
 
     public const string PublicKeyCredentialTypeStringEnum =
         nameof(PublicKeyCredentialTypeStringEnum);

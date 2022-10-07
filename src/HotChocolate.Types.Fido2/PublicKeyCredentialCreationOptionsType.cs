@@ -22,7 +22,7 @@ public class PublicKeyCredentialCreationOptionsType : ObjectType<CredentialCreat
             .Description(ObjectTypeResources.PublicKeyCredentialCreationOptionsType_User_Description);
 
         descriptor.Field(f => f.Challenge)
-            .Type<NonNullType<Base64Type>>()
+            .Type<NonNullType<Base64UrlType>>()
             .Description(ObjectTypeResources.PublicKeyCredentialCreationOptionsType_Challenge_Description);
 
         descriptor.Field(f => f.PubKeyCredParams)

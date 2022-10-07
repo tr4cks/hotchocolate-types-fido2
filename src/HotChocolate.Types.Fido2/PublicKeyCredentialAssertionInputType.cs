@@ -14,7 +14,7 @@ public class PublicKeyCredentialAssertionInputType : InputObjectType<Authenticat
             .Description(ObjectTypeResources.PublicKeyCredentialAssertionInputType_Description);
 
         descriptor.Field(f => f.Id)
-            .Type<NonNullType<Base64Type>>()
+            .Type<NonNullType<Base64UrlType>>()
             .Description(ObjectTypeResources.PublicKeyCredentialAssertionInputType_Id_Description);
 
         descriptor.Field(f => f.Type)
@@ -22,7 +22,7 @@ public class PublicKeyCredentialAssertionInputType : InputObjectType<Authenticat
             .Description(ObjectTypeResources.PublicKeyCredentialAssertionInputType_Type_Description);
 
         descriptor.Field(f => f.RawId)
-            .Type<NonNullType<Base64Type>>()
+            .Type<NonNullType<Base64UrlType>>()
             .Description(ObjectTypeResources.PublicKeyCredentialAssertionInputType_RawId_Description);
 
         descriptor.Field(f => f.Response)
@@ -46,19 +46,19 @@ public class AuthenticatorAssertionResponseInputType : InputObjectType<Authentic
 
         descriptor.Field(f => f.ClientDataJson)
             .Name("clientDataJSON")
-            .Type<NonNullType<Base64Type>>()
+            .Type<NonNullType<Base64UrlType>>()
             .Description(ObjectTypeResources.AuthenticatorAssertionResponseInputType_ClientDataJson_Description);
 
         descriptor.Field(f => f.AuthenticatorData)
-            .Type<NonNullType<Base64Type>>()
+            .Type<NonNullType<Base64UrlType>>()
             .Description(ObjectTypeResources.AuthenticatorAssertionResponseInputType_AuthenticatorData_Description);
 
         descriptor.Field(f => f.Signature)
-            .Type<NonNullType<Base64Type>>()
+            .Type<NonNullType<Base64UrlType>>()
             .Description(ObjectTypeResources.AuthenticatorAssertionResponseInputType_Signature_Description);
 
         descriptor.Field(f => f.UserHandle)
-            .Type<Base64Type>()
+            .Type<Base64UrlType>()
             .Description(ObjectTypeResources.AuthenticatorAssertionResponseInputType_UserHandle_Description);
     }
 }

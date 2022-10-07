@@ -3,6 +3,7 @@ using Fido2NetLib;
 using Fido2NetLib.Objects;
 using HotChocolate.Execution;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 
 namespace HotChocolate.Types.Fido2.UnitTests;
 
@@ -39,15 +40,15 @@ public class MakeAssertionTests
             .SetQuery(MakeAssertionInputQuery)
             .AddVariableValue("input", new Dictionary<string, object?>
             {
-                {"id", Convert.ToBase64String(Encoding.UTF8.GetBytes("Hello World!"))},
+                {"id", Base64UrlEncoder.Encode("Hello World!")},
                 {"type", "public-key"},
-                {"rawId", Convert.ToBase64String(Encoding.UTF8.GetBytes("Hello World!"))},
+                {"rawId", Base64UrlEncoder.Encode("Hello World!")},
                 {"response", new Dictionary<string, object?>
                 {
-                    {"clientDataJSON", Convert.ToBase64String(Encoding.UTF8.GetBytes("Hello World!"))},
-                    {"authenticatorData", Convert.ToBase64String(Encoding.UTF8.GetBytes("Hello World!"))},
-                    {"signature", Convert.ToBase64String(Encoding.UTF8.GetBytes("Hello World!"))},
-                    {"userHandle", Convert.ToBase64String(Encoding.UTF8.GetBytes("Hello World!"))}
+                    {"clientDataJSON", Base64UrlEncoder.Encode("Hello World!")},
+                    {"authenticatorData", Base64UrlEncoder.Encode("Hello World!")},
+                    {"signature", Base64UrlEncoder.Encode("Hello World!")},
+                    {"userHandle", Base64UrlEncoder.Encode("Hello World!")}
                 }},
                 {"extensions", new Dictionary<string, object?>
                 {

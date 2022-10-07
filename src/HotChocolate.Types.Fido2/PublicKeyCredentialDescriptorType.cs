@@ -18,7 +18,7 @@ public class PublicKeyCredentialDescriptorType : ObjectType<PublicKeyCredentialD
             .Description(ObjectTypeResources.PublicKeyCredentialDescriptorType_Type_Description);
 
         descriptor.Field(f => f.Id)
-            .Type<NonNullType<Base64Type>>()
+            .Type<NonNullType<Base64UrlType>>()
             .Description(ObjectTypeResources.PublicKeyCredentialDescriptorType_Id_Description);
 
         descriptor.Field(f => f.Transports)

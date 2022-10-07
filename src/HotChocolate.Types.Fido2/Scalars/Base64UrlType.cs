@@ -1,14 +1,15 @@
 using System.Diagnostics.CodeAnalysis;
 using HotChocolate.Language;
+using Microsoft.IdentityModel.Tokens;
 
 namespace HotChocolate.Types.Fido2.Scalars;
 
 // ReSharper disable once ClassNeverInstantiated.Global
-internal class Base64Type : ScalarType<byte[], StringValueNode>
+internal class Base64UrlType : ScalarType<byte[], StringValueNode>
 {
-    public Base64Type() : base(WellKnownScalarTypes.Base64)
+    public Base64UrlType() : base(WellKnownScalarTypes.Base64Url)
     {
-        Description = ScalarResources.Base64Type_Description;
+        Description = ScalarResources.Base64UrlType_Description;
     }
 
     /// <inheritdoc />
@@ -16,8 +17,7 @@ internal class Base64Type : ScalarType<byte[], StringValueNode>
     {
         try
         {
-            // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
-            Convert.FromBase64String(valueSyntax.Value);
+            Base64UrlEncoder.DecodeBytes(valueSyntax.Value);
         }
         catch (FormatException)
         {
@@ -38,7 +38,7 @@ internal class Base64Type : ScalarType<byte[], StringValueNode>
 
             byte[] value => ParseValue(value),
 
-            _ => throw ThrowHelper.Base64_ParseValue_IsInvalid(this)
+            _ => throw ThrowHelper.Base64Url_ParseValue_IsInvalid(this)
         };
     }
 
@@ -49,7 +49,7 @@ internal class Base64Type : ScalarType<byte[], StringValueNode>
         {
             return value;
         }
-        throw ThrowHelper.Base64_ParseLiteral_IsInvalid(this);
+        throw ThrowHelper.Base64Url_ParseLiteral_IsInvalid(this);
     }
 
     /// <inheritdoc />
@@ -92,13 +92,13 @@ internal class Base64Type : ScalarType<byte[], StringValueNode>
         }
     }
 
-    private string Serialize(byte[] runtimeValue) => Convert.ToBase64String(runtimeValue);
+    private string Serialize(byte[] runtimeValue) => Base64UrlEncoder.Encode(runtimeValue);
 
     private bool TryDeserialize(string resultValue, [NotNullWhen(true)] out byte[]? runtimeValue)
     {
         try
         {
-            runtimeValue = Convert.FromBase64String(resultValue);
+            runtimeValue = Base64UrlEncoder.DecodeBytes(resultValue);
             return true;
         }
         catch (FormatException)

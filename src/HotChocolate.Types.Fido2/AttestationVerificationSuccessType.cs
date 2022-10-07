@@ -14,14 +14,14 @@ public class AttestationVerificationSuccessType : ObjectType<AttestationVerifica
 
         // AssertionVerificationResult
         descriptor.Field(f => f.CredentialId)
-            .Type<NonNullType<Base64Type>>();
+            .Type<NonNullType<Base64UrlType>>();
 
         descriptor.Field(f => f.Counter)
             .Type<NonNullType<UnsignedIntType>>();
 
         // AttestationVerificationSuccess
         descriptor.Field(f => f.PublicKey)
-            .Type<NonNullType<Base64Type>>();
+            .Type<NonNullType<Base64UrlType>>();
 
         descriptor.Field(f => f.User)
             .Type<NonNullType<PublicKeyCredentialUserEntityType>>();

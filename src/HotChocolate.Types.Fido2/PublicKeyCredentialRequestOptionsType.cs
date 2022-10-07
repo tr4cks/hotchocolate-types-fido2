@@ -14,7 +14,7 @@ public class PublicKeyCredentialRequestOptionsType : ObjectType<AssertionOptions
             .Description(ObjectTypeResources.PublicKeyCredentialRequestOptionsType_Description);
 
         descriptor.Field(f => f.Challenge)
-            .Type<NonNullType<Base64Type>>()
+            .Type<NonNullType<Base64UrlType>>()
             .Description(ObjectTypeResources.PublicKeyCredentialRequestOptionsType_Challenge_Description);
 
         descriptor.Field(f => f.Timeout)

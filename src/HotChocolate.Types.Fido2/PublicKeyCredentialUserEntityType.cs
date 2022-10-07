@@ -13,7 +13,7 @@ public class PublicKeyCredentialUserEntityType : ObjectType<Fido2User>
             .Description(ObjectTypeResources.PublicKeyCredentialUserEntityType_Description);
 
         descriptor.Field(f => f.Id)
-            .Type<NonNullType<Base64Type>>()
+            .Type<NonNullType<Base64UrlType>>()
             .Description(ObjectTypeResources.PublicKeyCredentialUserEntityType_Id_Description);
 
         descriptor.Field(f => f.DisplayName)

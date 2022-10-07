@@ -13,7 +13,7 @@ public class AssertionVerificationResultType : ObjectType<AssertionVerificationR
             .Description(ObjectTypeResources.AssertionVerificationResultType_Description);
 
         descriptor.Field(f => f.CredentialId)
-            .Type<NonNullType<Base64Type>>();
+            .Type<NonNullType<Base64UrlType>>();
 
         descriptor.Field(f => f.Counter)
             .Type<NonNullType<UnsignedIntType>>();

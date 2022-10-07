@@ -57,21 +57,21 @@ namespace HotChocolate.Types.Fido2.Scalars {
             }
         }
         
-        internal static string Base64Type_Description {
+        internal static string Base64UrlType_Description {
             get {
-                return ResourceManager.GetString("Base64Type_Description", resourceCulture);
+                return ResourceManager.GetString("Base64UrlType_Description", resourceCulture);
             }
         }
         
-        internal static string Base64Type_IsInvalid_ParseLiteral {
+        internal static string Base64UrlType_IsInvalid_ParseLiteral {
             get {
-                return ResourceManager.GetString("Base64Type_IsInvalid_ParseLiteral", resourceCulture);
+                return ResourceManager.GetString("Base64UrlType_IsInvalid_ParseLiteral", resourceCulture);
             }
         }
         
-        internal static string Base64Type_IsInvalid_ParseValue {
+        internal static string Base64UrlType_IsInvalid_ParseValue {
             get {
-                return ResourceManager.GetString("Base64Type_IsInvalid_ParseValue", resourceCulture);
+                return ResourceManager.GetString("Base64UrlType_IsInvalid_ParseValue", resourceCulture);
             }
         }
         

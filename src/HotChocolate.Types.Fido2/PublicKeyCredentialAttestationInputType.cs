@@ -14,7 +14,7 @@ public class PublicKeyCredentialAttestationInputType : InputObjectType<Authentic
             .Description(ObjectTypeResources.PublicKeyCredentialAttestationInputType_Description);
 
         descriptor.Field(f => f.Id)
-            .Type<NonNullType<Base64Type>>()
+            .Type<NonNullType<Base64UrlType>>()
             .Description(ObjectTypeResources.PublicKeyCredentialAttestationInputType_Id_Description);
 
         descriptor.Field(f => f.Type)
@@ -22,7 +22,7 @@ public class PublicKeyCredentialAttestationInputType : InputObjectType<Authentic
             .Description(ObjectTypeResources.PublicKeyCredentialAttestationInputType_Type_Description);
 
         descriptor.Field(f => f.RawId)
-            .Type<NonNullType<Base64Type>>()
+            .Type<NonNullType<Base64UrlType>>()
             .Description(ObjectTypeResources.PublicKeyCredentialAttestationInputType_RawId_Description);
 
         descriptor.Field(f => f.Response)
@@ -46,11 +46,11 @@ public class AuthenticatorAttestationResponseInputType : InputObjectType<Authent
 
         descriptor.Field(f => f.ClientDataJson)
             .Name("clientDataJSON")
-            .Type<NonNullType<Base64Type>>()
+            .Type<NonNullType<Base64UrlType>>()
             .Description(ObjectTypeResources.AuthenticatorAttestationResponseInputType_ClientDataJson_Description);
 
         descriptor.Field(f => f.AttestationObject)
-            .Type<Base64Type>()
+            .Type<Base64UrlType>()
             .Description(ObjectTypeResources.AuthenticatorAttestationResponseInputType_AttestationObject_Description);
     }
 }

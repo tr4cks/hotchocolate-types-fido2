@@ -24,14 +24,14 @@
     <data name="AuthenticationExtensionsClientOutputsType_Description" xml:space="preserve">
         <value>[Documentation](https://www.w3.org/TR/webauthn-2/#iface-authentication-extensions-client-outputs)</value>
     </data>
-    <data name="Base64Type_Description" xml:space="preserve">
-        <value>The Base64 scalar type represents a string encoded in base64.</value>
+    <data name="Base64UrlType_Description" xml:space="preserve">
+        <value>The Base64Url scalar type represents a string encoded in base64url.</value>
     </data>
-    <data name="Base64Type_IsInvalid_ParseLiteral" xml:space="preserve">
-        <value>Base64Type cannot parse the provided literal. The provided value is not encoded in base 64.</value>
+    <data name="Base64UrlType_IsInvalid_ParseLiteral" xml:space="preserve">
+        <value>Base64UrlType cannot parse the provided literal. The provided value is not encoded in base64url.</value>
     </data>
-    <data name="Base64Type_IsInvalid_ParseValue" xml:space="preserve">
-        <value>Base64Type cannot parse the provided value. The provided value is not encoded in base 64.</value>
+    <data name="Base64UrlType_IsInvalid_ParseValue" xml:space="preserve">
+        <value>Base64UrlType cannot parse the provided value. The provided value is not encoded in base64url.</value>
     </data>
     <data name="EnumMemberType_WebAuthn_Description" xml:space="preserve">
         <value>Represents the `{0}` enumeration as a string according to the FIDO2/WebAuthn specification.
