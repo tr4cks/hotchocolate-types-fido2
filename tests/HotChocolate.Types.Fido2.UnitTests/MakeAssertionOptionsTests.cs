@@ -6,11 +6,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace HotChocolate.Types.Fido2.UnitTests;
 
-public class AssertionOptionsTests
+public class MakeAssertionOptionsTests
 {
-    private const string AssertionOptionsOutputQuery = @"
+    private const string MakeAssertionOptionsOutputQuery = @"
         mutation {
-            assertionOptionsOutput {
+            makeAssertionOptionsOutput {
                 challenge
                 timeout
                 rpId
@@ -37,7 +37,7 @@ public class AssertionOptionsTests
                 });
                 builder.AddMutationType<MutationType>();
             });
-        var result = await executor.ExecuteAsync(AssertionOptionsOutputQuery);
+        var result = await executor.ExecuteAsync(MakeAssertionOptionsOutputQuery);
 
         Assert.Null(result.Errors);
     }
@@ -46,7 +46,7 @@ public class AssertionOptionsTests
     // ReSharper disable once MemberCanBePrivate.Global
     public class MutationType
     {
-        public AssertionOptions AssertionOptionsOutput()
+        public AssertionOptions MakeAssertionOptionsOutput()
         {
             Fido2Configuration configuration = new()
             {
