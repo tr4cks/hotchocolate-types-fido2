@@ -8,7 +8,7 @@
 
   <PropertyGroup>
     <PackageId>HotChocolate.Extensions.Types.Fido2</PackageId>
-    <PackageVersion>1.0.0-preview.2</PackageVersion>
+    <PackageVersion>1.0.0-rc.1</PackageVersion>
     <Description>HotChocolate Fido2 integration</Description>
     <Authors>tr4cks</Authors>
     <RepositoryType>git</RepositoryType>
@@ -39,6 +39,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ObjectTypeResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="TypeResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TypeResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -51,6 +55,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>ObjectTypeResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="TypeResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TypeResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
