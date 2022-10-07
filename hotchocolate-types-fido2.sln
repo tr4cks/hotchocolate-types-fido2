@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36A5444A-AC50-478F-89CC-EAA024DDD96A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{C177720B-10E6-49C1-BD27-A63BBC225DE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChocolate.Types.Fido2", "src\HotChocolate.Types.Fido2\HotChocolate.Types.Fido2.csproj", "{103B3C78-FBA8-4866-B53B-64551E853C34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fido2Api", "samples\Fido2Api\Fido2Api.csproj", "{0DE0D804-A2AC-4918-9AB4-91871DB979FB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FAC354FD-683F-4099-B68C-1C26E3445490}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C50B157D-12F6-4945-9C7B-CA2D442C1764}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChocolate.Types.Fido2.UnitTests", "tests\HotChocolate.Types.Fido2.UnitTests\HotChocolate.Types.Fido2.UnitTests.csproj", "{A3967F04-7DA5-4ED1-A8A7-809EF30DBDFA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChocolate.Types.Fido2", "src\HotChocolate.Types.Fido2\HotChocolate.Types.Fido2.csproj", "{25B78FAA-0018-4740-A5A2-2B88C08A1A52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{083D1ED5-96D0-4EB3-BA9A-69D224346A44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChocolate.Types.Fido2.UnitTests", "tests\HotChocolate.Types.Fido2.UnitTests\HotChocolate.Types.Fido2.UnitTests.csproj", "{7ACDFA5F-ECD2-4E51-920B-9F0AC78E9825}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,17 +24,22 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{103B3C78-FBA8-4866-B53B-64551E853C34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{103B3C78-FBA8-4866-B53B-64551E853C34}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{103B3C78-FBA8-4866-B53B-64551E853C34}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{103B3C78-FBA8-4866-B53B-64551E853C34}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A3967F04-7DA5-4ED1-A8A7-809EF30DBDFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A3967F04-7DA5-4ED1-A8A7-809EF30DBDFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A3967F04-7DA5-4ED1-A8A7-809EF30DBDFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A3967F04-7DA5-4ED1-A8A7-809EF30DBDFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DE0D804-A2AC-4918-9AB4-91871DB979FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DE0D804-A2AC-4918-9AB4-91871DB979FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DE0D804-A2AC-4918-9AB4-91871DB979FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DE0D804-A2AC-4918-9AB4-91871DB979FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25B78FAA-0018-4740-A5A2-2B88C08A1A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25B78FAA-0018-4740-A5A2-2B88C08A1A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25B78FAA-0018-4740-A5A2-2B88C08A1A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25B78FAA-0018-4740-A5A2-2B88C08A1A52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ACDFA5F-ECD2-4E51-920B-9F0AC78E9825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ACDFA5F-ECD2-4E51-920B-9F0AC78E9825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ACDFA5F-ECD2-4E51-920B-9F0AC78E9825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ACDFA5F-ECD2-4E51-920B-9F0AC78E9825}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{103B3C78-FBA8-4866-B53B-64551E853C34} = {36A5444A-AC50-478F-89CC-EAA024DDD96A}
-		{A3967F04-7DA5-4ED1-A8A7-809EF30DBDFA} = {FAC354FD-683F-4099-B68C-1C26E3445490}
+		{0DE0D804-A2AC-4918-9AB4-91871DB979FB} = {C177720B-10E6-49C1-BD27-A63BBC225DE8}
+		{25B78FAA-0018-4740-A5A2-2B88C08A1A52} = {C50B157D-12F6-4945-9C7B-CA2D442C1764}
+		{7ACDFA5F-ECD2-4E51-920B-9F0AC78E9825} = {083D1ED5-96D0-4EB3-BA9A-69D224346A44}
 	EndGlobalSection
 EndGlobal
