@@ -41,6 +41,15 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li>
+      <a href="#examples">Examples</a>
+      <ul>
+        <li><a href="#create-attestation-options">Create Attestation Options</a></li>
+        <li><a href="#register-credentials">Register Credentials</a></li>
+        <li><a href="#create-assertion-options">Create Assertion Options</a></li>
+        <li><a href="#verify-the-assertion-response">Verify The Assertion Response</a></li>
+      </ul>
+    </li>
     <li><a href="#type-mapping-table">Type Mapping Table</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#credits">Credits</a></li>
@@ -86,7 +95,7 @@ Configure services to integrate all types defined by the `fido2-net-lib` library
 ```csharp
 builder.Services.AddFido2(options =>
 {
-    // See the configuration example at https://github.com/passwordless-lib/fido2-net-lib/blob/v3.0.1/Demo/Startup.cs#L47
+    // See the configuration example at https://github.com/passwordless-lib/fido2-net-lib/blob/v3.0.0/Demo/Startup.cs#L47
 });
 
 builder.Services
@@ -101,14 +110,73 @@ as it is the case in `fido2-net-lib` library.
 You can consult the schema via `Banana Cake Pop` to directly see which type you can use
 and deduce the relationships using the [table below](#type-mapping-table).
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- EXAMPLES -->
+## Examples
+
+Here is the list of the different prototypes needed to implement the protocol.
+You can refer to the [examples](https://github.com/passwordless-lib/fido2-net-lib/tree/v3.0.0#examples)
+provided in the `fido2-net-lib` library documentation to understand what
+each of the following prototypes correspond to. Refer also to their implementation in
+the [example](https://github.com/tr4cks/hotchocolate-types-fido2/blob/main/samples/Fido2Api/Mutation.cs)
+provided in the project.
+
 For more details concerning the implementation of controllers allowing the implementation
 of [FIDO2](https://fidoalliance.org/fido2/) / [WebAuthn](https://www.w3.org/TR/webauthn/)
-refer to the [example](https://github.com/passwordless-lib/fido2-net-lib/blob/v3.0.1/Demo/Controller.cs)
+refer to the [example](https://github.com/passwordless-lib/fido2-net-lib/blob/v3.0.0/Demo/Controller.cs)
 provided by the `fido2-net-lib` library.
 
-<br />
+### [Create Attestation Options](https://github.com/passwordless-lib/fido2-net-lib/tree/v3.0.0#create-attestation-options)
 
-⚠️ **NON-COMPLETE DOCUMENTATION** ⚠️
+```csharp
+public CredentialCreateOptions MakeCredentialOptions(
+    IFido2 fido2,
+    IHttpContextAccessor httpContextAccessor,
+    string? username,
+    string displayName,
+    AttestationConveyancePreference attType,
+    AuthenticatorAttachment? authType,
+    bool requireResidentKey,
+    UserVerificationRequirement userVerification)
+{ }
+```
+
+### [Register Credentials](https://github.com/passwordless-lib/fido2-net-lib/tree/v3.0.0#register-credentials)
+
+```csharp
+public async Task<AttestationVerificationSuccess> MakeCredential(
+    IFido2 fido2,
+    IHttpContextAccessor httpContextAccessor,
+    AuthenticatorAttestationRawResponse attestationResponse,
+    CancellationToken cancellationToken)
+{ }
+```
+
+### [Create Assertion Options](https://github.com/passwordless-lib/fido2-net-lib/tree/v3.0.0#create-assertion-options)
+
+```csharp
+public AssertionOptions MakeAssertionOptions(
+    IResolverContext context,
+    IFido2 fido2,
+    IHttpContextAccessor httpContextAccessor,
+    string? username,
+    UserVerificationRequirement userVerification = UserVerificationRequirement.Discouraged)
+{ }
+```
+
+### [Verify The Assertion Response](https://github.com/passwordless-lib/fido2-net-lib/tree/v3.0.0#verify-the-assertion-response)
+
+```csharp
+public async Task<AssertionVerificationResult> MakeAssertion(
+    IFido2 fido2,
+    IHttpContextAccessor httpContextAccessor,
+    AuthenticatorAssertionRawResponse clientResponse,
+    CancellationToken cancellationToken)
+{ }
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
