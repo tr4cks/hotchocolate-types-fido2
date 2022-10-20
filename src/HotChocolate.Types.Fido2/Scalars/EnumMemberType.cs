@@ -4,9 +4,13 @@ using HotChocolate.Language;
 
 namespace HotChocolate.Types.Fido2.Scalars;
 
-public class EnumMemberType<TEnum> : ScalarType<TEnum, StringValueNode> where TEnum : struct, Enum
+public class EnumMemberType<TEnum> :
+    ScalarType<TEnum, StringValueNode> where TEnum : struct, Enum
 {
-    public EnumMemberType(NameString name, string? description = null, BindingBehavior bind = BindingBehavior.Explicit) : base(name, bind)
+    public EnumMemberType(
+        NameString name,
+        string? description = null,
+        BindingBehavior bind = BindingBehavior.Explicit) : base(name, bind)
     {
         Description = description;
     }
@@ -29,7 +33,8 @@ public class EnumMemberType<TEnum> : ScalarType<TEnum, StringValueNode> where TE
 
             TEnum value => ParseValue(value),
 
-            _ => throw ThrowHelper.EnumMember_ParseValue_IsInvalid(this, typeof(TEnum).Name)
+            _ => throw ThrowHelper.EnumMember_ParseValue_IsInvalid(this,
+                typeof(TEnum).Name)
         };
     }
 
@@ -88,7 +93,9 @@ public class EnumMemberType<TEnum> : ScalarType<TEnum, StringValueNode> where TE
         return EnumNameMapper<TEnum>.GetName(runtimeValue);
     }
 
-    private bool TryDeserialize(string resultValue, [NotNullWhen(true)] out TEnum? runtimeValue)
+    private bool TryDeserialize(
+        string resultValue,
+        [NotNullWhen(true)] out TEnum? runtimeValue)
     {
         if (EnumNameMapper<TEnum>.TryGetValue(resultValue, out var result))
         {

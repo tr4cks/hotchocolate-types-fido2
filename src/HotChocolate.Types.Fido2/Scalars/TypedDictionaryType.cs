@@ -5,13 +5,17 @@ using HotChocolate.Utilities;
 
 namespace HotChocolate.Types.Fido2.Scalars;
 
-// todo: format files max line
-internal abstract class TypedDictionaryType<TRuntimeType> : ScalarType<TRuntimeType, ObjectValueNode>
+internal abstract class TypedDictionaryType<TRuntimeType> :
+    ScalarType<TRuntimeType, ObjectValueNode>
 {
-    private readonly DictionaryToObjectValueConverter _dictionaryToObjectValueConverter = new();
+    private readonly DictionaryToObjectValueConverter _dictionaryToObjectValueConverter =
+        new();
     private readonly ObjectValueToDictionaryConverter _objectValueToDictConverter = new();
 
-    protected TypedDictionaryType(NameString name, string? description = null, BindingBehavior bind = BindingBehavior.Explicit) : base(name, bind)
+    protected TypedDictionaryType(
+        NameString name,
+        string? description = null,
+        BindingBehavior bind = BindingBehavior.Explicit) : base(name, bind)
     {
         Description = description;
     }
@@ -28,7 +32,8 @@ internal abstract class TypedDictionaryType<TRuntimeType> : ScalarType<TRuntimeT
 
             TRuntimeType value => ParseValue(value),
 
-            _ => throw ThrowHelper.TypedDictionary_ParseValue_IsInvalid(this, typeof(TRuntimeType).Name)
+            _ => throw ThrowHelper.TypedDictionary_ParseValue_IsInvalid(this,
+                typeof(TRuntimeType).Name)
         };
     }
 
@@ -40,7 +45,8 @@ internal abstract class TypedDictionaryType<TRuntimeType> : ScalarType<TRuntimeT
         {
             return value;
         }
-        throw ThrowHelper.TypedDictionary_ParseLiteral_IsInvalid(this, typeof(TRuntimeType).Name);
+        throw ThrowHelper.TypedDictionary_ParseLiteral_IsInvalid(this,
+            typeof(TRuntimeType).Name);
     }
 
     /// <inheritdoc />
@@ -50,7 +56,8 @@ internal abstract class TypedDictionaryType<TRuntimeType> : ScalarType<TRuntimeT
         {
             return _dictionaryToObjectValueConverter.Convert(dict);
         }
-        throw ThrowHelper.TypedDictionary_ParseValue_IsInvalid(this, typeof(TRuntimeType).Name);
+        throw ThrowHelper.TypedDictionary_ParseValue_IsInvalid(this,
+            typeof(TRuntimeType).Name);
     }
 
     /// <inheritdoc />
@@ -78,7 +85,8 @@ internal abstract class TypedDictionaryType<TRuntimeType> : ScalarType<TRuntimeT
             case null:
                 runtimeValue = null;
                 return true;
-            case IReadOnlyDictionary<string, object?> d when TryDeserialize(d, out var value):
+            case IReadOnlyDictionary<string, object?> d
+                when TryDeserialize(d, out var value):
                 runtimeValue = value;
                 return true;
             default:
@@ -87,7 +95,13 @@ internal abstract class TypedDictionaryType<TRuntimeType> : ScalarType<TRuntimeT
         }
     }
 
-    protected abstract bool TrySerialize(TRuntimeType runtimeValue, [NotNullWhen(true)] out IReadOnlyDictionary<string, object?>? resultValue);
+    protected abstract bool TrySerialize(
+        TRuntimeType runtimeValue,
+        [NotNullWhen(true)]
+        out IReadOnlyDictionary<string, object?>? resultValue);
 
-    protected abstract bool TryDeserialize(IReadOnlyDictionary<string, object?> resultValue, [NotNullWhen(true)] out TRuntimeType? runtimeValue);
+    protected abstract bool TryDeserialize(
+        IReadOnlyDictionary<string, object?> resultValue,
+        [NotNullWhen(true)]
+        out TRuntimeType? runtimeValue);
 }

@@ -5,14 +5,20 @@ using Fido2NetLib.Objects;
 namespace HotChocolate.Types.Fido2.Scalars;
 
 // ReSharper disable once ClassNeverInstantiated.Global
-internal class AuthenticationExtensionsClientInputsType : TypedDictionaryType<AuthenticationExtensionsClientInputs>
+internal class AuthenticationExtensionsClientInputsType :
+    TypedDictionaryType<AuthenticationExtensionsClientInputs>
 {
-    public AuthenticationExtensionsClientInputsType() : base(WellKnownScalarTypes.AuthenticationExtensionsClientInputs)
+    public AuthenticationExtensionsClientInputsType() :
+        base(WellKnownScalarTypes.AuthenticationExtensionsClientInputs)
     {
-        Description = ScalarResources.AuthenticationExtensionsClientInputsType_Description;
+        Description =
+            ScalarResources.AuthenticationExtensionsClientInputsType_Description;
     }
 
-    protected override bool TrySerialize(AuthenticationExtensionsClientInputs runtimeValue, [NotNullWhen(true)] out IReadOnlyDictionary<string, object?>? resultValue)
+    protected override bool TrySerialize(
+        AuthenticationExtensionsClientInputs runtimeValue,
+        [NotNullWhen(true)]
+        out IReadOnlyDictionary<string, object?>? resultValue)
     {
         Dictionary<string, object?> result = new();
         if (runtimeValue.Example is not null)
@@ -40,12 +46,17 @@ internal class AuthenticationExtensionsClientInputsType : TypedDictionaryType<Au
         return true;
     }
 
-    protected override bool TryDeserialize(IReadOnlyDictionary<string, object?> resultValue, [NotNullWhen(true)] out AuthenticationExtensionsClientInputs? runtimeValue)
+    protected override bool TryDeserialize(
+        IReadOnlyDictionary<string, object?> resultValue,
+        [NotNullWhen(true)]
+        out AuthenticationExtensionsClientInputs? runtimeValue)
     {
         try
         {
             var stringValue = JsonSerializer.Serialize(resultValue);
-            runtimeValue = JsonSerializer.Deserialize<AuthenticationExtensionsClientInputs>(stringValue)!;
+            runtimeValue =
+                JsonSerializer.Deserialize<AuthenticationExtensionsClientInputs>(
+                    stringValue)!;
             return true;
         }
         catch (Exception)

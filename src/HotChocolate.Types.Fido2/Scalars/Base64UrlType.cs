@@ -92,9 +92,12 @@ internal class Base64UrlType : ScalarType<byte[], StringValueNode>
         }
     }
 
-    private string Serialize(byte[] runtimeValue) => Base64UrlEncoder.Encode(runtimeValue);
+    private string Serialize(byte[] runtimeValue) =>
+        Base64UrlEncoder.Encode(runtimeValue);
 
-    private bool TryDeserialize(string resultValue, [NotNullWhen(true)] out byte[]? runtimeValue)
+    private bool TryDeserialize(
+        string resultValue,
+        [NotNullWhen(true)] out byte[]? runtimeValue)
     {
         try
         {

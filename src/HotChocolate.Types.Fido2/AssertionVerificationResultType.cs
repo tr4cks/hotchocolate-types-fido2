@@ -6,7 +6,8 @@ namespace HotChocolate.Types.Fido2;
 // ReSharper disable once ClassNeverInstantiated.Global
 public class AssertionVerificationResultType : ObjectType<AssertionVerificationResult>
 {
-    protected override void Configure(IObjectTypeDescriptor<AssertionVerificationResult> descriptor)
+    protected override void Configure(
+        IObjectTypeDescriptor<AssertionVerificationResult> descriptor)
     {
         descriptor.BindFieldsExplicitly()
             .Name(WellKnownObjectTypes.AssertionVerificationResult)

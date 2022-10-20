@@ -5,7 +5,8 @@ namespace HotChocolate.Types.Fido2.UnitTests;
 
 public class UtilitiesTests
 {
-    private readonly ObjectValueToDictionaryConverter _objectValueToDictionaryConverter = new();
+    private readonly ObjectValueToDictionaryConverter _objectValueToDictionaryConverter =
+        new();
 
     [Fact]
     public void DictionaryToObjectValueConverterTest()

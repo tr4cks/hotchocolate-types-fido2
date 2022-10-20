@@ -13,7 +13,9 @@ public class Mutation
 
     private string FormatException(Exception e)
     {
-        return e.InnerException is not null ? $"{e.Message} ({e.InnerException.Message})" : e.Message;
+        return e.InnerException is not null
+            ? $"{e.Message} ({e.InnerException.Message})"
+            : e.Message;
     }
 
     public CredentialCreateOptions MakeCredentialOptions(
@@ -30,7 +32,8 @@ public class Mutation
         {
             if (string.IsNullOrEmpty(username))
             {
-                username = $"{displayName} (Usernameless user created at {DateTime.UtcNow})";
+                username =
+                    $"{displayName} (Usernameless user created at {DateTime.UtcNow})";
             }
 
             // 1. Get user from DB by username (in our example, auto create missing users)
@@ -143,10 +146,12 @@ public class Mutation
             if (!string.IsNullOrEmpty(username))
             {
                 // 1. Get user from DB
-                var user = DemoStorage.GetUser(username) ?? throw new ArgumentException("Username was not registered");
+                var user = DemoStorage.GetUser(username) ??
+                           throw new ArgumentException("Username was not registered");
 
                 // 2. Get registered credentials from database
-                existingCredentials = DemoStorage.GetCredentialsByUser(user).Select(c => c.Descriptor).ToList();
+                existingCredentials = DemoStorage.GetCredentialsByUser(user)
+                    .Select(c => c.Descriptor).ToList();
             }
 
             var exts = new AuthenticationExtensionsClientInputs()
@@ -162,7 +167,8 @@ public class Mutation
             );
 
             // 4. Temporarily store options, session/in-memory cache/redis/db
-            httpContextAccessor.HttpContext!.Session.SetString("fido2.assertionOptions", options.ToJson());
+            httpContextAccessor.HttpContext!.Session.SetString("fido2.assertionOptions",
+                options.ToJson());
 
             // 5. Return options to client
             return options;
@@ -198,8 +204,11 @@ public class Mutation
             // 4. Create callback to check if userhandle owns the credentialId
             IsUserHandleOwnerOfCredentialIdAsync callback = static async (args, cancellationToken) =>
             {
-                var storedCreds = await DemoStorage.GetCredentialsByUserHandleAsync(args.UserHandle, cancellationToken);
-                return storedCreds.Exists(c => c.Descriptor.Id.SequenceEqual(args.CredentialId));
+                var storedCreds =
+                    await DemoStorage.GetCredentialsByUserHandleAsync(args.UserHandle,
+                        cancellationToken);
+                return storedCreds.Exists(c =>
+                    c.Descriptor.Id.SequenceEqual(args.CredentialId));
             };
 
             // 5. Make the assertion

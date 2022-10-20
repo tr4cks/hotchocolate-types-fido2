@@ -10,18 +10,22 @@ public class PublicKeyCredentialUserEntityType : ObjectType<Fido2User>
     {
         descriptor.BindFieldsExplicitly()
             .Name(WellKnownObjectTypes.PublicKeyCredentialUserEntity)
-            .Description(ObjectTypeResources.PublicKeyCredentialUserEntityType_Description);
+            .Description(
+                ObjectTypeResources.PublicKeyCredentialUserEntityType_Description);
 
         descriptor.Field(f => f.Id)
             .Type<NonNullType<Base64UrlType>>()
-            .Description(ObjectTypeResources.PublicKeyCredentialUserEntityType_Id_Description);
+            .Description(ObjectTypeResources
+                .PublicKeyCredentialUserEntityType_Id_Description);
 
         descriptor.Field(f => f.DisplayName)
             .Type<NonNullType<StringType>>()
-            .Description(ObjectTypeResources.PublicKeyCredentialUserEntityType_DisplayName_Description);
+            .Description(ObjectTypeResources
+                .PublicKeyCredentialUserEntityType_DisplayName_Description);
 
         descriptor.Field(f => f.Name)
             .Type<NonNullType<StringType>>()
-            .Description(ObjectTypeResources.PublicKeyCredentialUserEntityType_Name_Description);
+            .Description(ObjectTypeResources
+                .PublicKeyCredentialUserEntityType_Name_Description);
     }
 }

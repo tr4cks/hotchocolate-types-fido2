@@ -20,27 +20,33 @@ internal class DictionaryToObjectValueConverter : DictionaryVisitor<ConverterCon
         return result;
     }
 
-    protected override void VisitObject(IReadOnlyDictionary<string, object?> dictionary, ConverterContext context)
+    protected override void VisitObject(
+        IReadOnlyDictionary<string, object?> dictionary,
+        ConverterContext context)
     {
         List<ObjectFieldNode> fieldNodes = new();
         foreach (var field in dictionary)
         {
             ConverterContext valueContext = new();
             VisitField(field, valueContext);
-            Debug.Assert(valueContext.ValueNode != null, "valueContext.ValueNode != null");
+            Debug.Assert(valueContext.ValueNode != null,
+                "valueContext.ValueNode != null");
             fieldNodes.Add(new(field.Key, valueContext.ValueNode));
         }
         context.ValueNode = new ObjectValueNode(fieldNodes);
     }
 
-    protected override void VisitList(IReadOnlyList<object> list, ConverterContext context)
+    protected override void VisitList(
+        IReadOnlyList<object> list,
+        ConverterContext context)
     {
         List<IValueNode> valueNodes = new();
         foreach (var value in list)
         {
             ConverterContext valueContext = new();
             Visit(value, valueContext);
-            Debug.Assert(valueContext.ValueNode != null, "valueContext.ValueNode != null");
+            Debug.Assert(valueContext.ValueNode != null,
+                "valueContext.ValueNode != null");
             valueNodes.Add(valueContext.ValueNode);
         }
         context.ValueNode = new ListValueNode(valueNodes);
@@ -61,7 +67,9 @@ internal class DictionaryToObjectValueConverter : DictionaryVisitor<ConverterCon
             bool b => new BooleanValueNode(b),
             sbyte s => new IntValueNode(s),
             byte b => new IntValueNode(b),
-            _ => throw new NotSupportedException(string.Format(TypeResources.TypeConversion_ConvertNotSupported, value.GetType().Name, nameof(IValueNode)))
+            _ => throw new NotSupportedException(
+                string.Format(TypeResources.TypeConversion_ConvertNotSupported, 
+                    value.GetType().Name, nameof(IValueNode)))
         };
     }
 }
