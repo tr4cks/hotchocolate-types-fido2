@@ -119,7 +119,7 @@ Here is the list of the different prototypes needed to implement the protocol.
 You can refer to the [examples](https://github.com/passwordless-lib/fido2-net-lib/tree/v3.0.0#examples)
 provided in the `fido2-net-lib` library documentation to understand what
 each of the following prototypes correspond to. Refer also to their implementation in
-the [example](https://github.com/tr4cks/hotchocolate-types-fido2/blob/1.0.0-rc.1/samples/Fido2Api/Mutation.cs)
+the [example](https://github.com/tr4cks/hotchocolate-types-fido2/blob/1.0.0/samples/Fido2Api/Mutation.cs)
 provided in the project.
 
 For more details concerning the implementation of controllers allowing the implementation
